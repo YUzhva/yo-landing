@@ -16,6 +16,7 @@ module.exports = {
   entry: [
     '@babel/polyfill',
     path.join(srcPath, 'main.js'),
+    path.join(srcPath, 'styles', 'main.scss'),
   ],
   output: {
     path: path.join(rootPath, 'public'),
