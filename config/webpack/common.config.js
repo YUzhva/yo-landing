@@ -15,7 +15,8 @@ module.exports = {
   mode: JSON.stringify(process.env.NODE_ENV),
   entry: [
     '@babel/polyfill',
-    path.join(srcPath, 'main.js'),
+    path.join(rootPath, 'src/main.js'),
+    path.join(rootPath, 'src/styles/main.scss'),
   ],
   output: {
     path: path.join(rootPath, 'public'),
