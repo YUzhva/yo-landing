@@ -11,4 +11,4 @@ const MAIN = (
   </Provider>
 );
 
-ReactDOM.render(MAIN, document.getElementById('react-ethereal-boilerplate'));
+ReactDOM.render(MAIN, document.getElementById('yo-landing'));
