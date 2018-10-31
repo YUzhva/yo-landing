@@ -1,5 +1,5 @@
 {
-  "name": "react-ethereal-boilerplate",
+  "name": "yo-landing",
   "version": "0.0.2",
   "description": "React + Redux + redux-saga lightweight starter kit",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss"
   },
   "main": "index.js",
-  "repository": "git@github.com:mainset/react-ethereal-boilerplate.git",
+  "repository": "git@github.com:mainset/yo-landing.git",
   "author": "Yevhen Uzhva <yevhen.uzhva@gmail.com>",
   "license": "MIT",
   "private": false,
