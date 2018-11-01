@@ -1,0 +1,30 @@
+@import './fonts.scss';
+
+// Project Colors
+$prim-yellow: #FFCE00;
+
+// Borders
+$border-position-all: all;
+
+// Fonts
+
+h1 {
+  color: $prim-yellow;
+  @extend %CircularBold;
+  // @include font-size-xxx-large;
+}
+
+h2 {
+  @extend %CircularBold;
+  // @include font-size-xx-large;
+}
+
+h3 {
+  font-size: 30px;
+  @extend %CircularBold;
+}
+
+%medium-size {
+  font-size: 24px;
+  @extend %CircularBold;
+}

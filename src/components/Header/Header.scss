@@ -1,0 +1,26 @@
+@import 'styles/vars.scss';
+@import 'styles/mixins.scss';
+
+.YO.Header.Main-menu {
+  
+  .Header {
+    &__logo {
+      width: 90px;
+    }
+
+    &__menu {
+      .Header__menu {
+        &-item {
+          margin: 12px 24px;
+          padding: 6px 0;
+          @include solid-border($color: transparent, $position: bottom);
+          @extend %medium-size;
+          &:hover{
+            cursor: pointer;
+            @include solid-border($position: bottom);
+          }
+        }
+      }
+    }
+  } 
+}
