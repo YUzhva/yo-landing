@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { Header } from 'components/Header';
 
-const Home = () => (
-  <div className="home-page">
-    <div>Hello world!</div>
-    <br />
-    <Link to="/example">Check example page</Link>
-  </div>
-);
+
+class Home extends PureComponent {
+  render() {
+    return (
+      <div className="home-page">
+        <Header />
+        <Link to="/example">Check example page</Link>
+      </div>
+    );
+  }
+}
 
 export default Home;
