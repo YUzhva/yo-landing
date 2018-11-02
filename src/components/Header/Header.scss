@@ -1,5 +1,6 @@
 @import 'styles/vars.scss';
 @import 'styles/mixins.scss';
+@import 'styles/typography.scss';
 
 .YO.Header.Main-menu {
   
@@ -14,7 +15,6 @@
           margin: 12px 24px;
           padding: 6px 0;
           @include solid-border($color: transparent, $position: bottom);
-          @extend %medium-size;
           &:hover{
             cursor: pointer;
             @include solid-border($position: bottom);
