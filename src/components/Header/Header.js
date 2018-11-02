@@ -20,19 +20,19 @@ const Header = () => {
             <Menu.Menu className="Header__menu" position="right">
               <Menu.Item
                 name="home"
-                className="Header__menu-item"
+                className="Header__menu-item font-size-medium circular-bold"
               >
                 about Olenka
               </Menu.Item>
               <Menu.Item
                 name="home"
-                className="Header__menu-item"
+                className="Header__menu-item font-size-medium circular-bold"
               >
                 about Yevhen
               </Menu.Item>
               <Menu.Item
                 name="home"
-                className="Header__menu-item"
+                className="Header__menu-item font-size-medium circular-bold"
               >
                 contact us
               </Menu.Item>
