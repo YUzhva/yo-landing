@@ -8,10 +8,10 @@ $prim-black: #181819;
 $border-position-all: all;
 
 //Fonts
-$circular-medium: 'Circular Std Medium', sans-serif;
-$circular-book: 'Circular Std Book', sans-serif;
-$circular-book-italic: 'Circular Std Bold Italic', sans-serif;
-$circular-bold: 'Circular Std Bold', sans-serif;
+$circular-medium: 'Circular Std Medium', sans-serif !important;
+$circular-book: 'Circular Std Book', sans-serif !important;
+$circular-book-italic: 'Circular Std Bold Italic', sans-serif !important;
+$circular-bold: 'Circular Std Bold', sans-serif !important;
 
 // Font Sizes
 $font-size-xx-large: 64px;
@@ -19,3 +19,6 @@ $font-size-x-large: 48px;
 $font-size-large: 30px;
 $font-size-medium: 24px;
 $font-size-small: 18px;
+
+$font-size-large-em: 1.68em;
+$font-size-medium-em: 1.3em;

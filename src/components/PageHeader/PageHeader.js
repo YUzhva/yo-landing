@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid, Menu, Image } from 'semantic-ui-react';
 
 import Logo from '../../media/images/Logo.svg';
-import './Header.scss';
+import './PageHeader.scss';
 
-const Header = () => {
+const PageHeader = () => {
   return (
     <Grid container>
       <Grid.Row>
@@ -20,19 +20,19 @@ const Header = () => {
             <Menu.Menu className="Header__menu" position="right">
               <Menu.Item
                 name="home"
-                className="Header__menu-item font-size-medium circular-bold"
+                className="Header__menu-item font-size-medium circular-bold colored-black"
               >
                 about Olenka
               </Menu.Item>
               <Menu.Item
                 name="home"
-                className="Header__menu-item font-size-medium circular-bold"
+                className="Header__menu-item font-size-medium circular-bold colored-black"
               >
                 about Yevhen
               </Menu.Item>
               <Menu.Item
                 name="home"
-                className="Header__menu-item font-size-medium circular-bold"
+                className="Header__menu-item font-size-medium circular-bold colored-black"
               >
                 contact us
               </Menu.Item>
@@ -44,4 +44,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default PageHeader;
