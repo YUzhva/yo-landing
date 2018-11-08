@@ -30,12 +30,28 @@
   font-size: $font-size-large;
 }
 
+%fontSizeLargeEm {
+  font-size: $font-size-large-em;
+}
+
 %FontSizeMedium {
   font-size: $font-size-medium;
 }
 
+%FontSizeMediumEm {
+  font-size: $font-size-medium-em;
+}
+
 %FontSizeSmall {
   font-size: $font-size-small;
+}
+
+%ColoredBlack {
+  color: $prim-black !important;
+}
+
+%ColoredYellow {
+  color: $prim-yellow !important;
 }
 
 .font-size-xx-large {
@@ -50,8 +66,16 @@
   @extend %FontSizeLarge;
 }
 
+.font-size-large-em {
+  @extend %fontSizeLargeEm;
+}
+
 .font-size-medium {
   @extend %FontSizeMedium;
+}
+
+.font-size-medium-em {
+  @extend %FontSizeMediumEm;
 }
 
 .font-size-small {
@@ -72,4 +96,12 @@
 
 .circular-bold {
   @extend %CircularBold;
+}
+
+.colored-black {
+  @extend %ColoredBlack;
+}
+
+.colored-yellow {
+  @extend %ColoredYellow;
 }
