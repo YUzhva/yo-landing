@@ -1,0 +1,18 @@
+@import 'styles/mixins.scss';
+
+.home-page{
+
+  .YO.Welcome-screen {
+    padding: 5em 0;
+
+    .Welcome-screen {
+      &__button {
+        @include solid-border($width: 4px);
+        padding: 1em 3.5em;
+        border-radius: 2em;
+        margin-top: 1em;
+        display: inline-block;
+      }
+    }
+  }
+}
