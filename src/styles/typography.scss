@@ -6,6 +6,10 @@
   font-family: $circular-medium;
 }
 
+%CircularMediumItalic {
+  font-family: $circular-medium-italic;
+}
+
 %CircularBook {
   font-family: $circular-book;
 }
@@ -84,6 +88,10 @@
 
 .circular-medium {
   @extend %CircularMedium;
+}
+
+.circular-medium-italic {
+  @extend %CircularMediumItalic;
 }
 
 .circular-book {
