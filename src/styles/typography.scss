@@ -1,0 +1,75 @@
+@import './vars.scss';
+
+// Use without additional styles ONLY
+
+%CircularMedium {
+  font-family: $circular-medium;
+}
+
+%CircularBook {
+  font-family: $circular-book;
+}
+
+%CircularBookItalic {
+  font-family: $circular-book-italic;
+}
+
+%CircularBold {
+  font-family: $circular-bold;
+}
+
+%FontSizeXXLarge {
+  font-size: $font-size-xx-large;
+}
+
+%FontSizeXLarge {
+  font-size: $font-size-x-large;
+}
+
+%FontSizeLarge {
+  font-size: $font-size-large;
+}
+
+%FontSizeMedium {
+  font-size: $font-size-medium;
+}
+
+%FontSizeSmall {
+  font-size: $font-size-small;
+}
+
+.font-size-xx-large {
+  @extend %FontSizeXXLarge;
+}
+
+.font-size-x-large {
+  @extend %FontSizeXLarge;
+}
+
+.font-size-large {
+  @extend %FontSizeLarge;
+}
+
+.font-size-medium {
+  @extend %FontSizeMedium;
+}
+
+.font-size-small {
+  @extend %FontSizeSmall;
+}
+
+.circular-medium {
+  @extend %CircularMedium;
+}
+
+.circular-book {
+  @extend %CircularBook;
+}
+
+.circular-book-italic {
+  @extend %CircularBookItalic;
+}
+
+.circular-bold {
+  @extend %CircularBold;
+}

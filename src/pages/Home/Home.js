@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Header } from 'components/Header';
 
-const Home = () => (
-  <div className="home-page">
-    <div>Hello world</div>
-    <br />
-    <Link to="/example">Check example page</Link>
-  </div>
-);
+const Home = () => {
+  return (
+    <div className="home-page">
+      <Header />
+      <Link to="/example">Check example page</Link>
+    </div>
+  );
+};
 
 export default Home;
