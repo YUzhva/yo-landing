@@ -1,0 +1,40 @@
+.yo-spacing {
+  display: block;
+
+  &.yo-spacing {
+    &--height {
+      &-12 {
+        height: 0.875em;
+      }
+
+      &-24 {
+        height: 1.5em;
+      }
+
+      &-48 {
+        height: 3em;
+      }
+
+      &-64 {
+        height: 4em;
+      }
+    }
+
+    &--width {
+      &-12 {
+        display: inline;
+        margin: 0 12px;
+      }
+
+      &-24 {
+        display: inline;
+        margin: 0 24px;
+      }
+
+      &-48 {
+        display: inline;
+        margin: 0 48px;
+      }
+    }
+  }
+}
