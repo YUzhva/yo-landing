@@ -1,0 +1,32 @@
+@import 'styles/vars.scss';
+
+.yo-project-card {
+  align-items: center;
+  border: 2px solid $color--gray;
+  border-radius: 8px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 424px;
+  overflow: auto;
+
+  &.yo-project-card {
+    &--active {
+      border-color: $color--yellow;
+
+      &:hover {
+        box-shadow: 0 0 10px 0 $color--yellow;
+      }
+    }
+
+    &__as-link {
+      &:hover {
+        border-color: $color--yellow;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
