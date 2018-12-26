@@ -1,10 +1,10 @@
 @import './vars.scss';
 
-@mixin solid-border($position: all, $width: 2px, $color: $prim-yellow) {
-  @if $position == $border-position-all {
-    border: $width solid $color;
-  }
-  @else {
-    border-#{$position}: $width solid $color;
-  }
+@mixin with-border() {
+  border: 0;
+  border-bottom-width: 2px;
+  border-color: $color--yellow;
+  border-style: solid;
+  padding-bottom: 6px;
+  text-decoration: none;
 }
