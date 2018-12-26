@@ -1,0 +1,39 @@
+@import 'styles/vars.scss';
+
+.yo-grid {
+  // Extra large devices (large desktops, 1500px and up)
+  @media (min-width: 1500px) {
+    width: 1440px;
+  }
+
+  .yo-grid__row {
+    @media (min-width: $media-device--mobile) {
+      &--equal-height {
+        display: flex;
+        flex-wrap: wrap;
+
+        > [class*='col-'] {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &::after,
+        &::before {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .yo-grid__col {
+    padding: 0 0.75em !important;
+    @media (min-width: $media-device--mobile) {
+      &--content-align {
+        &-middle {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
