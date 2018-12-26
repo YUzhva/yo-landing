@@ -1,0 +1,21 @@
+@import 'styles/mixins.scss';
+
+.yo-header {
+  margin-bottom: 9em;
+  margin-top: 5.75em;
+
+  .yo-header {
+    &__logo {
+      max-height: 90px;
+    }
+
+    &__menu-item {
+      text-decoration: none;
+
+      &:hover,
+      &--active {
+        @include with-border();
+      }
+    }
+  }
+}
