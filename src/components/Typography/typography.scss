@@ -1,0 +1,72 @@
+@import './typography-vars';
+
+// Components
+@import './Heading/heading.scss';
+@import './Paragraph/paragraph.scss';
+
+// Fonts
+@font-face {
+  font-family: $font--circular-bold;
+  font-weight: 700;
+  src: url('~media/fonts/CircularStd-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: $font--circular-book;
+  font-weight: 300;
+  src: url('~media/fonts/CircularStd-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: $font--circular-medium;
+  font-weight: 500;
+  src: url('~media/fonts/CircularStd-Medium.woff') format('woff');
+}
+
+// Typography
+.ms-typography {
+  font-weight: normal;
+  margin: 0;
+
+  &.ms-typography {
+    &--center {
+      text-align: center;
+    }
+
+    &--justify {
+      text-align: justify;
+    }
+
+    &--inline {
+      display: inline;
+    }
+
+    &--typeface {
+      &-bold {
+        font-family: $font--circular-bold;
+      }
+
+      &-book {
+        font-family: $font--circular-book;
+      }
+
+      &-medium {
+        font-family: $font--circular-medium;
+      }
+    }
+
+    &--color {
+      &-black {
+        color: $color--black;
+      }
+
+      &-yellow {
+        color: $color--yellow;
+      }
+    }
+  }
+
+  a {
+    color: inherit; // stylelint-disable-line
+  }
+}
