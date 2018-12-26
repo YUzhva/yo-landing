@@ -1,52 +1,13 @@
 @import 'styles/mixins.scss';
 
-.home-page{
-
-  .YO.common-padding {
-    padding: 5em 0;
-  }
-
-  .YO.Home-page {  
-
-    .Home-page {
-      &__button {
-        display: inline-block;
-        &--with-border {
-          @include solid-border($width: 4px);
-          padding: 1em 3.5em;
-          border-radius: 2em;
-        }
-        &--margin-right {
-          margin-right: 1em;
-        }
-        &--margin-top {
-          margin-top: 1em;
-        }
-      }
+.yo-home-page {
+  .yo-home-page {
+    &__section {
+      margin-top: 14.375em !important;
     }
-  }
 
-  .YO.Testimonials {
-
-    .Testimonials {
-      &__subtitle {
-        padding: 6px 0;
-        @include solid-border($color: $prim-yellow, $position: bottom);
-        display: inline-block;
-        margin-bottom: 2em;
-      }
-      &__block {
-        margin-bottom: 2em;
-      }
-    }
-  }
-}
-
-.YO.Contact {
-
-  .Contact {
-    &__mail {
-      text-decoration: underline;
+    &__title--decorated {
+      @include with-border();
     }
   }
 }
