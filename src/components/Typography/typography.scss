@@ -23,6 +23,12 @@
   src: url('~media/fonts/CircularStd-Medium.woff') format('woff');
 }
 
+html,
+body {
+  font-family: $font--circular-book;
+  font-size: 16px !important; // NOTE: override default font-size
+}
+
 // Typography
 .ms-typography {
   font-weight: normal;
