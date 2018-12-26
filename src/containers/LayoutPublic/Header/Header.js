@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
+import Image from 'react-bootstrap/lib/Image';
 
 import { Heading, Spacing } from 'components';
 import { Grid } from 'restyled';
