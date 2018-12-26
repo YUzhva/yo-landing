@@ -1,2 +1,41 @@
+@import '~styles/vars';
+
 // Thirds party libraries
-@import '~semantic-ui-css/semantic.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// Components
+@import 'components/Button/button.scss';
+@import 'components/ProjectCard/project-card.scss';
+@import 'components/Spacing/spacing.scss';
+@import 'components/Typography/typography.scss';
+
+// Containers
+@import 'containers/LayoutPublic/layout-public.scss';
+
+// Pages
+@import 'pages/Home/home.scss';
+
+// Restyled
+@import 'restyled/Grid/grid.scss';
+
+html,
+body {
+  font-size: 16px !important; // NOTE: override default font-size
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+i,
+span,
+br,
+button,
+img {
+  &::selection {
+    background-color: $color--yellow;
+    color: $color--white;
+  }
+}

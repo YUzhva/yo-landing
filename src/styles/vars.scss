@@ -1,25 +1,11 @@
-@import './fonts.scss';
-
-// Project Colors
-$prim-yellow: #FFCE00;
-$prim-black: #181819;
+// Colors
+$color--black: #181819;
+$color--white: #fff;
+$color--yellow: #ffce00;
+$color--gray: rgba(155, 155, 155, 0.23);
 
 // Borders
 $border-position-all: all;
 
-//Fonts
-$circular-medium: 'Circular Std Medium', sans-serif !important;
-$circular-medium-italic: 'Circular Std Medium Italic', sans-serif !important;
-$circular-book: 'Circular Std Book', sans-serif !important;
-$circular-book-italic: 'Circular Std Bold Italic', sans-serif !important;
-$circular-bold: 'Circular Std Bold', sans-serif !important;
-
-// Font Sizes
-$font-size-xx-large: 64px;
-$font-size-x-large: 48px;
-$font-size-large: 30px;
-$font-size-medium: 24px;
-$font-size-small: 18px;
-
-$font-size-large-em: 1.68em;
-$font-size-medium-em: 1.3em;
+// Media
+$media-device--mobile: 768px;
