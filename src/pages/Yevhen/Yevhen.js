@@ -16,7 +16,7 @@ import ImgPublBox from './publbox-logo.png';
 
 const Yevhen = () => (
   <Grid>
-    <Grid.Row>
+    <Grid.Row data-aos="zoom-out-right">
       <Grid.Col>
         <Image src={ImgYevhen} alt="yevhen-as-lego" responsive />
       </Grid.Col>
@@ -24,7 +24,7 @@ const Yevhen = () => (
 
     <Spacing height={48} />
 
-    <Grid.Row>
+    <Grid.Row data-aos="fade-in" data-aos-duration="1500">
       <Grid.Col xs={12} sm={6}>
         <Heading size={3} typeface="bold">
           Yevhen, Front-End developer
@@ -77,7 +77,7 @@ const Yevhen = () => (
 
     <Spacing height={48} />
 
-    <Grid.Row colEqualHeight>
+    <Grid.Row colEqualHeight data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <Grid.Col xs={12} sm={4}>
         <ProjectCard href="https://buddy.com/">
           <Image src={ImgBuddy} alt="buddy-logo" responsive />

@@ -15,7 +15,7 @@ import Contribute from './images/Contribute.svg';
 const Home = () => (
   <div className="yo-home-page">
     {/* SECTION 1 */}
-    <Grid>
+    <Grid data-aos="fade-up" data-aos-delay="250">
       <Grid.Row colEqualHeight>
         <Grid.Col xs={12} md={5}>
           {/* DEPENDING CONTENT */}
@@ -23,12 +23,12 @@ const Home = () => (
             <Grid.Col xs={12}>
               <Heading color="yellow" typeface="bold">Bonjour</Heading>
               <Spacing height={12} />
-              <Heading size={2} typeface="bold">
+              <Heading size={2} typeface="bold" data-aos="fade-up" data-aos-delay="350">
                 We are YO! mates — Yevhen & Olenka.
               </Heading>
               <Spacing height={24} />
             </Grid.Col>
-            <Grid.Col xs={12}>
+            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450">
               <Heading size={3} typeface="medium" justify>
                 We build awesome products with a power of user-friendly Design and
                 fast Front-end development.
@@ -43,7 +43,7 @@ const Home = () => (
                 responsive
               />
             </Grid.Col>
-            <Grid.Col xs={12}>
+            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550">
               <Spacing height={48} />
               <Button>
                 start a project
@@ -65,7 +65,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 2 */}
-    <Grid className="yo-home-page__section">
+    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="top-center">
       <Grid.Row>
         <Grid.Col xs={12}>
           <Heading size={2} typeface="bold">
@@ -107,7 +107,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 3 */}
-    <Grid className="yo-home-page__section">
+    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="center-center">
       <Grid.Row>
         <Grid.Col xs={12} sm={6}>
           <Heading size={2} typeface="bold">
@@ -130,7 +130,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 4 */}
-    <Grid className="yo-home-page__section">
+    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
       <Grid.Row>
         <Grid.Col xs={12}>
           <Heading size={2} typeface="bold">

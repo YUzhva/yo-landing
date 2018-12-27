@@ -16,7 +16,7 @@ import ImgCropstream from './cropstream-project.png';
 
 const Olenka = () => (
   <Grid>
-    <Grid.Row>
+    <Grid.Row data-aos="zoom-out-right">
       <Grid.Col>
         <Image src={ImgOlenka} alt="olenka-as-lego" responsive />
       </Grid.Col>
@@ -24,7 +24,7 @@ const Olenka = () => (
 
     <Spacing height={48} />
 
-    <Grid.Row>
+    <Grid.Row data-aos="fade-in" data-aos-duration="1500">
       <Grid.Col xs={12} sm={6}>
         <Heading size={3} typeface="bold">
           Olenka, UX/UI Designer
@@ -82,7 +82,7 @@ const Olenka = () => (
 
     <Spacing height={48} />
 
-    <Grid.Row colEqualHeight>
+    <Grid.Row colEqualHeight data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
       <Grid.Col xs={12} sm={4}>
         <ProjectCard href="https://cloudcoach.com/">
           <Image src={ImgCloudcoach} alt="cloudcoach-project" responsive />

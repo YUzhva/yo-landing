@@ -16,7 +16,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="yo-header">
+      <div className="yo-header" data-aos="fade-down" data-aos-delay="250">
         <Grid>
           <Grid.Row colEqualHeight>
             <Grid.Col xs={3}>
@@ -61,6 +61,7 @@ class Header extends Component {
                 >
                   about Yevhen
                 </NavLink>
+                {/*
                 <Spacing width={24} />
                 <NavLink
                   to="#"
@@ -69,6 +70,7 @@ class Header extends Component {
                 >
                   contact us
                 </NavLink>
+                */}
               </Heading>
             </Grid.Col>
           </Grid.Row>
