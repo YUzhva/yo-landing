@@ -4,19 +4,33 @@ import cn from 'classnames';
 
 const withTypography = (WrappedComponent) => {
   const WrappedComponentWithTypography = ({
-    center, className, color, justify, inline, typeface, ...rest
-  }) => (
-    <WrappedComponent
-      className={cn(className, 'ms-typography', {
-        'ms-typography--center': center,
-        [`ms-typography--color-${color}`]: color,
-        'ms-typography--justify': justify,
-        'ms-typography--inline': inline,
-        [`ms-typography--typeface-${typeface}`]: typeface,
-      })}
-      {...rest}
-    />
-  );
+    center, className, color, justify, inline, typeface, ...props
+  }) => {
+    const dataAttr = {};
+    const rest = {};
+
+    Object.keys(props).forEach((propKeyName) => {
+      if (propKeyName.includes('data-')) {
+        dataAttr[propKeyName] = props[propKeyName];
+      } else {
+        rest[propKeyName] = props[propKeyName];
+      }
+    });
+
+    return (
+      <WrappedComponent
+        className={cn(className, 'ms-typography', {
+          'ms-typography--center': center,
+          [`ms-typography--color-${color}`]: color,
+          'ms-typography--justify': justify,
+          'ms-typography--inline': inline,
+          [`ms-typography--typeface-${typeface}`]: typeface,
+        })}
+        dataAttr={dataAttr}
+        {...rest}
+      />
+    );
+  };
 
   WrappedComponentWithTypography.defaultProps = {
     center: false,

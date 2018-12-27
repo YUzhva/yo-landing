@@ -5,9 +5,9 @@ import cn from 'classnames';
 import withTypography from '../Typography';
 
 const Heading = ({
-  children, className, size,
+  children, className, dataAttr, size,
 }) => (
-  createElement(`h${size}`, { className: cn(className, 'ms-heading') }, children)
+  createElement(`h${size}`, { className: cn(className, 'ms-heading'), ...dataAttr }, children)
 );
 
 Heading.defaultProps = {
@@ -18,6 +18,7 @@ Heading.defaultProps = {
 Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.string,
+  dataAttr: PropTypes.object,
   size: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 
