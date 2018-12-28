@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { Heading } from 'components';
+import { Heading, ChangeableText } from 'components';
 import { Grid } from 'restyled';
 
 const Footer = () => (
   <div className="yo-footer">
     <Grid>
       <Grid.Row colEqualHeight>
-        <Grid.Col xs={12} sm={6} md={5}>
+        <Grid.Col xs={12} sm={6}>
           <Heading size={2} typeface="bold">
-            Let’s colaborate together on your next project!
+            Let’s colaborate together on your <ChangeableText variants={['significant', 'markable', 'essential']} highlight /> project!
           </Heading>
         </Grid.Col>
 
-        <Grid.Col xs={12} sm={6} md={5} mdOffset={1} contentAlign="middle">
+        <Grid.Col xs={12} sm={6} contentAlign="middle">
           <Heading size={4} typeface="bold">
             Contact us:
           </Heading>

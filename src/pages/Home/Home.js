@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
 
 import {
+  ChangeableText,
   Button,
   Heading,
   Paragraph,
@@ -21,7 +22,9 @@ const Home = () => (
           {/* DEPENDING CONTENT */}
           <Grid.Row>
             <Grid.Col xs={12}>
-              <Heading color="yellow" typeface="bold">Bonjour</Heading>
+              <Heading color="yellow" typeface="bold">
+                <ChangeableText variants={['Bonjour', '👋', 'Hello', 'Привіт', 'Hola']} />
+              </Heading>
               <Spacing height={12} />
               <Heading size={2} typeface="bold" data-aos="fade-up" data-aos-delay="350">
                 We are YO! mates — Yevhen & Olenka.
