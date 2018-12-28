@@ -1,0 +1,100 @@
+@import 'styles/vars.scss';
+
+$yellow: #e6a32f;
+$yellow-dark: #c87932;
+
+$size: 30px;
+$duration: 2s;
+
+@mixin psuedo {
+  content: '';
+  display: block;
+}
+
+@keyframes move {
+  0%,
+  100% { transform: none; }
+  12.5% { transform: translate($size, 0); }
+  25% { transform: translate($size*2, 0); }
+  37.5% { transform: translate($size*2, $size); }
+  50% { transform: translate($size*2, $size*2); }
+  62.5% { transform: translate($size, $size*2); }
+  75% { transform: translate(0, $size*2); }
+  87.5% { transform: translate(0, $size); }
+}
+
+.yo-loader {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  transition: opacity 1.5s, transform 1s;
+  width: 100vw;
+
+  &--loading {
+    opacity: 1;
+    // transform: translate3d(0, 0, 0);
+    transform: scale(1);
+  }
+
+  &--loaded {
+    opacity: 0;
+    // transform: translate3d(0, -100%, 0);
+    transform: scale(0);
+  }
+
+  .yo-loader {
+    &__content {
+      display: inline-flex;
+      flex-wrap: wrap;
+      height: $size * 3;
+      transform: rotateX(45deg) rotate(45deg);
+      transform-style: preserve-3d;
+      width: $size * 3;
+    }
+
+    &__box {
+      animation: move $duration ease-in-out infinite both;
+      background: $color--yellow;
+      box-shadow: $size*3.75 $size*3.75 20px rgba($color--black, 0.5);
+      height: $size;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform-style: preserve-3d;
+      width: $size;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i/2 * -$duration;
+        }
+      }
+
+      &::before,
+      &::after {
+        @include psuedo;
+        height: $size;
+        position: absolute;
+        width: $size;
+      }
+
+      &::before {
+        background: $yellow;
+        left: 0;
+        top: 100%;
+        transform: rotateX(-90deg);
+        transform-origin: center top;
+      }
+
+      &::after {
+        background: $yellow-dark;
+        left: 100%;
+        top: 0;
+        transform: rotateY(90deg);
+        transform-origin: center left;
+      }
+    }
+  }
+}
