@@ -1,0 +1,28 @@
+@import 'styles/vars.scss';
+
+.yo-changeable-text {
+  cursor: text;
+  display: initial;
+  position: relative;
+
+  &--highlighted {
+    background-color: $color--yellow;
+    color: $color--white;
+  }
+
+  .yo-changeable-text__variant {
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translate3d(-50%, 0, 0);
+    transition: opacity 1.5s, transform 1s;
+
+    &--active {
+      left: 100%;
+      opacity: 1;
+      position: initial;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
