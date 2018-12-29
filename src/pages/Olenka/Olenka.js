@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
 
 import {
+  ChangeableText,
   ProjectCard,
   Heading,
   Paragraph,
@@ -47,19 +48,27 @@ const Olenka = () => (
         </Paragraph>
         <Spacing height={64} />
         <Heading color="yellow" size={4} inline>
-          <span>linkedin</span>
+          <a href="https://www.linkedin.com/in/olenatomchuk/" target="_blank" rel="noopener noreferrer">
+            linkedin
+          </a>
           <Spacing width={24} />
-          <span>dribbble</span>
+          <a href="https://dribbble.com/o_tomchuk/" target="_blank" rel="noopener noreferrer">
+            dribbble
+          </a>
           <Spacing width={24} />
-          <span>upwork</span>
+          <a href="https://www.upwork.com/freelancers/~01c62b2e955c1e036b/" target="_blank" rel="noopener noreferrer">
+            upwork
+          </a>
           <Spacing width={24} />
-          <span>skype</span>
+          <a href="https://join.skype.com/invite/gt1WTcqRsJGA/" target="_blank" rel="noopener noreferrer">
+            skype
+          </a>
         </Heading>
       </Grid.Col>
 
       <Grid.Col xs={12} sm={4} smOffset={2}>
         <Heading size={4} typeface="bold">
-          daily tools:
+          <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
         </Heading>
         <Spacing height={48} />
         <Paragraph>
@@ -112,7 +121,7 @@ const Olenka = () => (
       </Grid.Col>
       <Grid.Col xs={12} sm={4}>
         <ProjectCard active>
-          <Heading size={3} color="yellow">
+          <Heading size={3} color="yellow" center>
             Your next big project (=
           </Heading>
         </ProjectCard>

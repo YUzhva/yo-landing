@@ -24,7 +24,7 @@ class LayoutPublic extends Component {
         if (this.isTimeoutFinished) {
           this.setState({ isLandingLoadedPreviously: true });
         }
-      });
+      }, { once: true });
 
       // NOTE: if application was loaded faster
       // let's has minimal animation time for Loader

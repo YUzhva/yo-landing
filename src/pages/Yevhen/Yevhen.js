@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
 
 import {
+  ChangeableText,
   ProjectCard,
   Heading,
   Paragraph,
@@ -31,34 +32,59 @@ const Yevhen = () => (
         </Heading>
         <Spacing height={48} />
         <Paragraph>
-          Flexible React developer with a keen eye for details.
+          <span role="img" aria-label="wave">👋</span>
+          Hi there.
+          <br />
+          I’m Professional JavaScript Developer, let’s build the next great
+          service together (=
         </Paragraph>
         <Spacing height={24} />
         <Paragraph>
-        Within 6 years of experience, I was involved in teams where we developed
-        a lot of high loaded and scalable web solutions for IoT, bank, FinTech,
-        healthcare and social network areas.
+          <span role="img" aria-label="rocket">🚀</span>
+          Achievements:
+          - 1 open source project created
+          - 3+ years working with React library
+          - 4+ years of web development
+          - 9 launched web apps for 500k+ customers
+          - 1000+ contributions at private Git projects during 2018
         </Paragraph>
         <Spacing height={24} />
         <Paragraph>
-          Daily collaboration through Slack, Skype, GitHut, Bitbucket,
-          Google Drive, JIRA makes me look like a daily offline developer.
+          <span role="img" aria-label="developer">👨‍💻</span>
+          My work motto when I’m starting a new project:
+          - minimize the time for familiarization with the project and fully
+          understand the client needs;
+          - create such an architecture and divide Components on such a way, so
+          most of App code will be reusable and easily scalable in future;
+        </Paragraph>
+        <Spacing height={24} />
+        <Paragraph>
+          <span role="img" aria-label="beer">🍻</span>
+          Looking forward to work with you!
         </Paragraph>
         <Spacing height={64} />
         <Heading color="yellow" size={4} inline>
-          <span>linkedin</span>
+          <a href="https://www.linkedin.com/in/yuzhva/" target="_blank" rel="noopener noreferrer">
+            linkedin
+          </a>
           <Spacing width={24} />
-          <span>github</span>
+          <a href="https://github.com/YUzhva/" target="_blank" rel="noopener noreferrer">
+            github
+          </a>
           <Spacing width={24} />
-          <span>upwork</span>
+          <a href="https://www.upwork.com/freelancers/~01c985f324d94452f7/" target="_blank" rel="noopener noreferrer">
+            upwork
+          </a>
           <Spacing width={24} />
-          <span>skype</span>
+          <a href="https://join.skype.com/invite/ntkyJzp3pREW/" target="_blank" rel="noopener noreferrer">
+            skype
+          </a>
         </Heading>
       </Grid.Col>
 
       <Grid.Col xs={12} sm={4} smOffset={2}>
         <Heading size={4} typeface="bold">
-          daily tools:
+          <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
         </Heading>
         <Spacing height={48} />
         <Paragraph>
@@ -66,11 +92,11 @@ const Yevhen = () => (
           <br />
           React + Redux
           <br />
-          redux-saga
+          SPA, PWA
           <br />
-          jest
+          GraphQL, WebSockets
           <br />
-          enzyme
+          jest, enzyme
         </Paragraph>
       </Grid.Col>
     </Grid.Row>
@@ -110,7 +136,7 @@ const Yevhen = () => (
       </Grid.Col>
       <Grid.Col xs={12} sm={4}>
         <ProjectCard active>
-          <Heading size={3} color="yellow">
+          <Heading size={3} color="yellow" center>
             Your next big project (=
           </Heading>
         </ProjectCard>

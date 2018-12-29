@@ -121,9 +121,13 @@ const Home = () => (
 
           <Paragraph>React leaflet markercluster.</Paragraph>
           <Heading color="yellow" size={4} inline>
-            <span>code</span>
+            <a href="https://github.com/YUzhva/react-leaflet-markercluster/" target="_blank" rel="noopener noreferrer">
+              code
+            </a>
             <Spacing width={12} />
-            <span>demo</span>
+            <a href="https://yuzhva.github.io/react-leaflet-markercluster/" target="_blank" rel="noopener noreferrer">
+              demo
+            </a>
           </Heading>
         </Grid.Col>
         <Grid.Col xs={12} sm={6}>
@@ -184,12 +188,13 @@ const Home = () => (
           <Spacing height={64} />
 
           <Paragraph justify>
-            Olena has great designing skills and she gets work done quickly and
-            on time. She is also clear, respectful and communicative. Olena
-            also has good understanding and knowledge of the iOS design
-            guidelines.
+          Yevhen is an absolute pleasure to work with. He did great work for our
+          React project. He is always available and very open with
+          communication. Top quality work. Very experienced. Very attentive to
+          details. Helped spot a few issues with our API not related to the
+          project. One of the best freelancers we have worked with.
             <Spacing height={24} />
-            <i>Upwork client, August 2018</i>
+            <i>Upwork client, December 2018</i>
           </Paragraph>
           <Spacing height={48} />
           <Paragraph justify>
