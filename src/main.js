@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import AOS from 'aos';
 // import { Provider } from 'react-redux';
 
+import { preloadImages } from 'utils';
+
+import ImgYevhenAndOlenkaAsLego from 'pages/Home/images/Persons.svg';
+import ImgYevhen from 'pages/Yevhen/Yevhen.svg';
+import ImgOlenka from 'pages/Olenka/Olenka.svg';
+
 // import reduxStore from './redux-store';
 import routes from './routes';
 
@@ -15,5 +21,7 @@ import routes from './routes';
 AOS.init({ once: true });
 
 const MAIN = routes;
+
+preloadImages([ImgYevhenAndOlenkaAsLego, ImgYevhen, ImgOlenka]);
 
 ReactDOM.render(MAIN, document.getElementById('yo-landing'));
