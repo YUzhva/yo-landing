@@ -2,7 +2,6 @@ require('dotenv').config();
 
 /* eslint-disable */
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 var babelConfig = require('../../babel.config');
@@ -57,9 +56,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        GOOGLE_ANALYTICS_TRACKING_ID: JSON.stringify(process.env.GOOGLE_ANALYTICS_TRACKING_ID),
       },
     }),
-    new HtmlWebpackPlugin({ template: path.join(srcPath, 'index.template.html') }),
   ],
   resolve: {
     modules: [srcPath, 'node_modules'],
