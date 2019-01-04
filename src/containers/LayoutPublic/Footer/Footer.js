@@ -19,10 +19,10 @@ const Footer = () => (
           </Heading>
           <Heading size={4}>
             <a
-              href="mailto:hello@yo-development.com"
+              href="mailto:ask@yoyoyo.pro"
               className="colored-black circular-book font-size-small"
             >
-              hello@yo-development.com
+              ask@yoyoyo.pro
             </a>
           </Heading>
         </Grid.Col>
