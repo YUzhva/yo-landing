@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
+import { Helmet } from 'react-helmet';
 
 import {
   ChangeableText,
@@ -17,6 +18,12 @@ import ImgCropstream from './cropstream-project.png';
 
 const Olenka = () => (
   <Grid>
+    <Helmet>
+      <title>
+        Olenka, UX/UI Designer
+      </title>
+    </Helmet>
+
     <Grid.Row data-aos="zoom-out-right">
       <Grid.Col>
         <Image src={ImgOlenka} alt="olenka-as-lego" responsive />

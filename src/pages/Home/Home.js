@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
+import { Helmet } from 'react-helmet';
 
 import {
   ChangeableText,
@@ -15,6 +16,12 @@ import Contribute from './images/Contribute.svg';
 
 const Home = () => (
   <div className="yo-home-page">
+    <Helmet>
+      <title>
+        YO! mates - Yevhen & Olenka
+      </title>
+    </Helmet>
+
     {/* SECTION 1 */}
     <Grid data-aos="fade-up" data-aos-delay="250">
       <Grid.Row colEqualHeight>

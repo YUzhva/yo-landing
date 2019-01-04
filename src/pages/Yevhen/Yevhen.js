@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
+import { Helmet } from 'react-helmet';
 
 import {
   ChangeableText,
@@ -17,6 +18,12 @@ import ImgPublBox from './publbox-logo.png';
 
 const Yevhen = () => (
   <Grid>
+    <Helmet>
+      <title>
+        Yevhen, Front-End developer
+      </title>
+    </Helmet>
+
     <Grid.Row data-aos="zoom-out-right">
       <Grid.Col>
         <Image src={ImgYevhen} alt="yevhen-as-lego" responsive />
