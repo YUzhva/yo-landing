@@ -44,7 +44,10 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: path.join(srcPath, 'index.prod.template.html') }),
+    new HtmlWebpackPlugin({
+      template: path.join(srcPath, 'index.prod.template.html'),
+      favicon: path.join(srcPath, 'media', 'favicon.png'),
+    }),
     new MiniCssExtractPlugin({
       filename: 'dist/styles.[hash].css',
     }),
