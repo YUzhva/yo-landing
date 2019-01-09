@@ -10,6 +10,8 @@ const Spacing = ({
 Spacing.defaultProps = {
   height: 0,
   width: 0,
+  hiddenAt: 'all',
+  visibleAt: 'all',
 };
 
 Spacing.propTypes = {
