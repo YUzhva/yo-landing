@@ -19,7 +19,7 @@ class Header extends Component {
       <div className="yo-header" data-aos="fade-down" data-aos-delay="250" data-aos-offset="0">
         <Grid>
           <Grid.Row colEqualHeight>
-            <Grid.Col xs={3}>
+            <Grid.Col xs={4}>
               <NavLink to="/">
                 <Image src={YOLogo} className="yo-header__logo" alt="yo-logo" responsive />
               </NavLink>
@@ -40,7 +40,7 @@ class Header extends Component {
             */}
 
             <Grid.Col
-              sm={9}
+              sm={8}
               className="text-right"
               contentAlign="middle"
               xsHidden

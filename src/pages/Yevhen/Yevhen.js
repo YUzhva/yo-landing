@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import {
   ChangeableText,
+  List,
   ProjectCard,
   Heading,
   Paragraph,
@@ -26,18 +27,18 @@ const Yevhen = () => (
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">
       <Grid.Col>
-        <Image src={ImgYevhen} alt="yevhen-as-lego" responsive />
+        <Image className="mobile-only--center" src={ImgYevhen} alt="yevhen-as-lego" responsive />
       </Grid.Col>
     </Grid.Row>
 
     <Spacing height={48} hiddenAt="mobile" />
 
-    <Grid.Row data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
+    <Grid.Row colMobileSpaced="sm" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
       <Grid.Col xs={12} sm={6}>
-        <Heading size={3} typeface="bold">
+        <Heading className="mobile-only--center" size={3} typeface="bold">
           Yevhen, Front-End developer
         </Heading>
-        <Spacing height={48} hiddenAt="mobile" />
+        <Spacing height={48} />
         <Paragraph>
           <span role="img" aria-label="wave">👋</span>
           Hi there.
@@ -45,72 +46,116 @@ const Yevhen = () => (
           I’m Professional JavaScript Developer, let’s build the next great
           service together (=
         </Paragraph>
+
         <Spacing height={24} />
-        <Paragraph>
-          <span role="img" aria-label="rocket">🚀</span>
-          Achievements:
-          - 1 open source project created
-          - 3+ years working with React library
-          - 4+ years of web development
-          - 9 launched web apps for 500k+ customers
-          - 1000+ contributions at private Git projects during 2018
-        </Paragraph>
+
+        <List>
+          <List.Item>
+            <span role="img" aria-label="rocket">🚀</span>
+            Achievements:
+          </List.Item>
+          <List.Item>
+            - 1 open source project created
+          </List.Item>
+          <List.Item>
+            - 3+ years working with React library
+          </List.Item>
+          <List.Item>
+            - 4+ years of web development
+          </List.Item>
+          <List.Item>
+            - 9 launched web apps for 500k+ customers
+          </List.Item>
+          <List.Item>
+            - 1000+ contributions at private Git projects during 2018
+          </List.Item>
+        </List>
+
         <Spacing height={24} />
-        <Paragraph>
-          <span role="img" aria-label="developer">👨‍💻</span>
-          My work motto when I’m starting a new project:
-          - minimize the time for familiarization with the project and fully
-          understand the client needs;
-          - create such an architecture and divide Components on such a way, so
-          most of App code will be reusable and easily scalable in future;
-        </Paragraph>
+
+        <List>
+          <List.Item>
+            <span role="img" aria-label="developer">👨‍💻</span>
+            My work motto when I’m starting a new project:
+          </List.Item>
+          <List.Item>
+            - minimize the time for familiarization with the project and fully
+            understand the client needs;
+          </List.Item>
+          <List.Item>
+            - create such an architecture and divide Components on such a way, so
+            most of App code will be reusable and easily scalable in future;
+          </List.Item>
+        </List>
         <Spacing height={24} />
         <Paragraph>
           <span role="img" aria-label="beer">🍻</span>
           Looking forward to work with you!
         </Paragraph>
-        <Spacing height={64} />
-        <Heading color="yellow" size={4} inline>
-          <a href="https://www.linkedin.com/in/yuzhva/" target="_blank" rel="noopener noreferrer">
-            linkedin
-          </a>
-          <Spacing width={24} />
-          <a href="https://github.com/YUzhva/" target="_blank" rel="noopener noreferrer">
-            github
-          </a>
-          <Spacing width={24} />
-          <a href="https://www.upwork.com/freelancers/~01c985f324d94452f7/" target="_blank" rel="noopener noreferrer">
-            upwork
-          </a>
-          <Spacing width={24} />
-          <a href="https://join.skype.com/invite/ntkyJzp3pREW/" target="_blank" rel="noopener noreferrer">
-            skype
-          </a>
-        </Heading>
+
+        <Spacing height={64} hiddenAt="mobile" />
+
+        <Grid.Row colMobileSpaced="md">
+          <Grid.Col xs={6} sm={3} md={3} lg={2}>
+            <Heading color="yellow" size={4} center>
+              <a href="https://www.linkedin.com/in/yuzhva/" target="_blank" rel="noopener noreferrer">
+                linkedin
+              </a>
+            </Heading>
+          </Grid.Col>
+          <Grid.Col xs={6} sm={3} md={3} lg={2}>
+            <Heading color="yellow" size={4} center>
+              <a href="https://github.com/YUzhva/" target="_blank" rel="noopener noreferrer">
+                github
+              </a>
+            </Heading>
+          </Grid.Col>
+          <Grid.Col xs={6} sm={3} md={3} lg={2}>
+            <Heading color="yellow" size={4} center>
+              <a href="https://www.upwork.com/freelancers/~01c985f324d94452f7/" target="_blank" rel="noopener noreferrer">
+                upwork
+              </a>
+            </Heading>
+          </Grid.Col>
+          <Grid.Col xs={6} sm={3} md={3} lg={2}>
+            <Heading color="yellow" size={4} center>
+              <a href="https://join.skype.com/invite/ntkyJzp3pREW/" target="_blank" rel="noopener noreferrer">
+                skype
+              </a>
+            </Heading>
+          </Grid.Col>
+        </Grid.Row>
       </Grid.Col>
 
       <Grid.Col xs={12} sm={4} smOffset={2}>
-        <Heading size={4} typeface="bold">
-          <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
-        </Heading>
-        <Spacing height={48} hiddenAt="mobile" />
-        <Paragraph>
-          ES6
-          <br />
-          React + Redux
-          <br />
-          SPA, PWA
-          <br />
-          GraphQL, WebSockets
-          <br />
-          jest, enzyme
-        </Paragraph>
+        <Grid.Row colMobileSpaced="sm">
+          <Grid.Col xs={12}>
+            <Heading size={4} typeface="bold">
+              <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
+            </Heading>
+          </Grid.Col>
+          <Grid.Col xs={6} sm={12}>
+            <Spacing height={48} hiddenAt="mobile" />
+            <List>
+              <List.Item>ES6</List.Item>
+              <List.Item>React + Redux</List.Item>
+              <List.Item>SPA, PWA</List.Item>
+            </List>
+          </Grid.Col>
+          <Grid.Col xs={6} sm={12}>
+            <List>
+              <List.Item>GraphQL, WebSockets</List.Item>
+              <List.Item>jest, enzyme</List.Item>
+            </List>
+          </Grid.Col>
+        </Grid.Row>
       </Grid.Col>
     </Grid.Row>
 
     <Spacing height={48} hiddenAt="mobile" />
+    <Spacing height={12} visibleAt="mobile" />
 
-    <Grid.Row colEqualHeight data-aos="fade-up">
+    <Grid.Row colEqualHeight colMobileSpaced="sm" data-aos="fade-up">
       <Grid.Col xs={12} sm={4}>
         <ProjectCard href="https://buddy.com/">
           <Image src={ImgBuddy} alt="buddy-logo" responsive />

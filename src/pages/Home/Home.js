@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import {
   ChangeableText,
+  List,
   Button,
   Heading,
   Paragraph,
@@ -27,18 +28,25 @@ const Home = () => (
       <Grid.Row colEqualHeight>
         <Grid.Col xs={12} md={5}>
           {/* DEPENDING CONTENT */}
-          <Grid.Row>
+          <Grid.Row colMobileSpaced="sm">
             <Grid.Col xs={12}>
-              <Heading color="yellow" typeface="bold">
+              <Heading className="mobile-only--center" color="yellow" typeface="bold">
                 <ChangeableText variants={['Bonjour', '👋', 'Hello', 'Привіт', 'Hola']} />
               </Heading>
-              <Spacing height={12} />
-              <Heading size={2} typeface="bold" data-aos="fade-up" data-aos-delay="350" data-aos-offset="0">
+              <Spacing height={12} hiddenAt="mobile" />
+              <Heading
+                size={2}
+                typeface="bold"
+                className="mobile-only--center"
+                data-aos="fade-up"
+                data-aos-delay="350"
+                data-aos-offset="0"
+              >
                 We are YO!&nbsp;mates
                 <br />
                 Yevhen & Olenka
               </Heading>
-              <Spacing height={24} hiddenAt="mobile" />
+              <Spacing height={24} />
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450" data-aos-offset="0">
               <Heading size={3} typeface="medium" justify>
@@ -47,7 +55,8 @@ const Home = () => (
                 We also enjoy to travel and try new beer tastes.
               </Heading>
             </Grid.Col>
-            <Grid.Col sm={12} mdHidden lgHidden>
+            <Grid.Col xs={12} mdHidden lgHidden>
+              <Spacing height={24} hiddenAt="mobile" />
               <Image
                 src={Persons}
                 className="center-block"
@@ -56,7 +65,7 @@ const Home = () => (
               />
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550" data-aos-offset="250">
-              <Spacing height={48} hiddenAt="mobile" />
+              <Spacing height={48} />
               <Button className="yo-home-page__start-btn">
                 start a project
               </Button>
@@ -86,41 +95,54 @@ const Home = () => (
         </Grid.Col>
       </Grid.Row>
 
-      <Spacing height={48} hiddenAt="mobile" />
+      <Spacing height={48} />
 
-      <Grid.Row>
+      <Grid.Row colMobileSpaced="sm">
         <Grid.Col xs={12} sm={6} md={5}>
-          <Paragraph>
-            UX design (defining personas, user scenarios, user stories, use cases)
-            <br />
-            Wireframing
-            <br />
-            High-fidelity mockups for web
-            <br />
-            Mobile applications design
-            <br />
-            Interactive Prototypes
-          </Paragraph>
+          <List>
+            <List.Item>
+              UX design (defining personas, user scenarios, user stories, use cases)
+            </List.Item>
+            <List.Item>
+              Wireframing
+            </List.Item>
+            <List.Item>
+              High-fidelity mockups for web
+            </List.Item>
+            <List.Item>
+              Mobile applications design
+            </List.Item>
+            <List.Item>
+              Interactive Prototypes
+            </List.Item>
+          </List>
         </Grid.Col>
+
         <Grid.Col xs={12} sm={6} md={5} mdOffset={1}>
-          <Paragraph>
-            UX design (defining personas, user scenarios, user stories, use cases)
-            <br />
-            Wireframing
-            <br />
-            High-fidelity mockups for web
-            <br />
-            Mobile applications design
-            <br />
-            Interactive Prototypes
-          </Paragraph>
+          <List>
+            <List.Item>
+              UX design (defining personas, user scenarios, user stories, use cases)
+            </List.Item>
+            <List.Item>
+              Wireframing
+            </List.Item>
+            <List.Item>
+              High-fidelity mockups for web
+            </List.Item>
+            <List.Item>
+              Mobile applications design
+            </List.Item>
+            <List.Item>
+              Interactive Prototypes
+            </List.Item>
+          </List>
         </Grid.Col>
       </Grid.Row>
     </Grid>
 
     {/* SECTION 3 */}
     <Grid className="yo-home-page__section" data-aos="fade-up">
-      <Grid.Row>
+      <Grid.Row colMobileSpaced="md" colEqualHeight>
         <Grid.Col xs={12} sm={6}>
           <Heading size={2} typeface="bold">
             Contributing to open-source
@@ -139,7 +161,7 @@ const Home = () => (
             </a>
           </Heading>
         </Grid.Col>
-        <Grid.Col xs={12} sm={6}>
+        <Grid.Col xs={12} sm={6} contentAlign="middle">
           <Image src={Contribute} alt="lego-blocks" responsive />
         </Grid.Col>
       </Grid.Row>
@@ -157,7 +179,7 @@ const Home = () => (
 
       <Spacing height={48} hiddenAt="mobile" />
 
-      <Grid.Row>
+      <Grid.Row colMobileSpaced="lg">
         <Grid.Col xs={12} sm={6} md={5}>
           <Heading size={4} typeface="bold">
             <span className="yo-home-page__title--decorated">for Olena</span>
@@ -190,6 +212,7 @@ const Home = () => (
             <i>Design manager @Kindgeek, May 2018</i>
           </Paragraph>
         </Grid.Col>
+
         <Grid.Col xs={12} sm={6} md={5} mdOffset={1}>
           <Heading size={4} typeface="bold">
             <span className="yo-home-page__title--decorated">for Yevhen</span>

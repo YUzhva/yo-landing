@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Heading, ChangeableText } from 'components';
+import { Heading, ChangeableText, Spacing } from 'components';
 import { Grid } from 'restyled';
 
 const Footer = () => (
   <div className="yo-footer">
     <Grid>
-      <Grid.Row colEqualHeight>
+      <Grid.Row colEqualHeight colMobileSpaced="md">
         <Grid.Col xs={12} sm={6}>
-          <Heading size={2} typeface="bold">
+          <Heading className="mobile-only--center" size={2} typeface="bold">
             Let’s colaborate together on your <ChangeableText variants={['significant', 'markable', 'essential']} highlight /> project!
           </Heading>
         </Grid.Col>
 
         <Grid.Col xs={12} sm={6} contentAlign="middle">
           <Heading size={4} typeface="bold">
-            Contact us:
+            Contact us:&nbsp;
           </Heading>
           <Heading size={4}>
             <a
