@@ -26,14 +26,21 @@
   }
 
   .yo-grid__col {
-    padding: 0 0.75em !important;
+    // NOTE: All screens, except mobile phones
     @media (min-width: $media-device--mobile) {
+      padding: 0 0.75em !important;
+
       &--content-align {
         &-middle {
           display: flex;
           justify-content: center;
         }
       }
+    }
+
+    // NOTE: Only for mobile phones
+    @media (max-width: $media-device--mobile) {
+      padding: 0 1em 3em !important;
     }
   }
 }

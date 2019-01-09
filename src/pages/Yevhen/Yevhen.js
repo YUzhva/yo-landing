@@ -24,20 +24,20 @@ const Yevhen = () => (
       </title>
     </Helmet>
 
-    <Grid.Row data-aos="zoom-out-right">
+    <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">
       <Grid.Col>
         <Image src={ImgYevhen} alt="yevhen-as-lego" responsive />
       </Grid.Col>
     </Grid.Row>
 
-    <Spacing height={48} />
+    <Spacing height={48} hiddenAt="mobile" />
 
-    <Grid.Row data-aos="fade-in" data-aos-duration="1500">
+    <Grid.Row data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
       <Grid.Col xs={12} sm={6}>
         <Heading size={3} typeface="bold">
           Yevhen, Front-End developer
         </Heading>
-        <Spacing height={48} />
+        <Spacing height={48} hiddenAt="mobile" />
         <Paragraph>
           <span role="img" aria-label="wave">👋</span>
           Hi there.
@@ -93,7 +93,7 @@ const Yevhen = () => (
         <Heading size={4} typeface="bold">
           <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
         </Heading>
-        <Spacing height={48} />
+        <Spacing height={48} hiddenAt="mobile" />
         <Paragraph>
           ES6
           <br />
@@ -108,9 +108,9 @@ const Yevhen = () => (
       </Grid.Col>
     </Grid.Row>
 
-    <Spacing height={48} />
+    <Spacing height={48} hiddenAt="mobile" />
 
-    <Grid.Row colEqualHeight data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+    <Grid.Row colEqualHeight data-aos="fade-up">
       <Grid.Col xs={12} sm={4}>
         <ProjectCard href="https://buddy.com/">
           <Image src={ImgBuddy} alt="buddy-logo" responsive />

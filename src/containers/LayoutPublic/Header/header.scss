@@ -1,8 +1,17 @@
 @import 'styles/mixins.scss';
 
 .yo-header {
-  margin-bottom: 9em;
-  margin-top: 5.75em;
+  // NOTE: All screens, except mobile phones
+  @media (min-width: $media-device--mobile) {
+    margin-bottom: 9em;
+    margin-top: 5.75em;
+  }
+
+  // NOTE: Only for mobile phones
+  @media (max-width: $media-device--mobile) {
+    margin-bottom: 1em;
+    margin-top: 4em;
+  }
 
   .yo-header {
     &__logo {

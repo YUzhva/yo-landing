@@ -24,20 +24,20 @@ const Olenka = () => (
       </title>
     </Helmet>
 
-    <Grid.Row data-aos="zoom-out-right">
+    <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">
       <Grid.Col>
         <Image src={ImgOlenka} alt="olenka-as-lego" responsive />
       </Grid.Col>
     </Grid.Row>
 
-    <Spacing height={48} />
+    <Spacing height={48} hiddenAt="mobile" />
 
-    <Grid.Row data-aos="fade-in" data-aos-duration="1500">
+    <Grid.Row data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
       <Grid.Col xs={12} sm={6}>
         <Heading size={3} typeface="bold">
           Olenka, UX/UI Designer
         </Heading>
-        <Spacing height={48} />
+        <Spacing height={48} hiddenAt="mobile" />
         <Paragraph>
           I’m skilled in user experience, interface and marketing design.
         </Paragraph>
@@ -77,7 +77,7 @@ const Olenka = () => (
         <Heading size={4} typeface="bold">
           <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
         </Heading>
-        <Spacing height={48} />
+        <Spacing height={48} hiddenAt="mobile" />
         <Paragraph>
           Sketch
           <br />
@@ -96,9 +96,9 @@ const Olenka = () => (
       </Grid.Col>
     </Grid.Row>
 
-    <Spacing height={48} />
+    <Spacing height={48} hiddenAt="mobile" />
 
-    <Grid.Row colEqualHeight data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+    <Grid.Row colEqualHeight data-aos="fade-up">
       <Grid.Col xs={12} sm={4}>
         <ProjectCard href="https://cloudcoach.com/">
           <Image src={ImgCloudcoach} alt="cloudcoach-project" responsive />

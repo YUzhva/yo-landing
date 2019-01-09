@@ -23,7 +23,7 @@ const Home = () => (
     </Helmet>
 
     {/* SECTION 1 */}
-    <Grid data-aos="fade-up" data-aos-delay="250">
+    <Grid data-aos="fade-up" data-aos-delay="250" data-aos-offset="0">
       <Grid.Row colEqualHeight>
         <Grid.Col xs={12} md={5}>
           {/* DEPENDING CONTENT */}
@@ -33,12 +33,14 @@ const Home = () => (
                 <ChangeableText variants={['Bonjour', '👋', 'Hello', 'Привіт', 'Hola']} />
               </Heading>
               <Spacing height={12} />
-              <Heading size={2} typeface="bold" data-aos="fade-up" data-aos-delay="350">
-                We are YO! mates — Yevhen & Olenka.
+              <Heading size={2} typeface="bold" data-aos="fade-up" data-aos-delay="350" data-aos-offset="0">
+                We are YO!&nbsp;mates
+                <br />
+                Yevhen & Olenka
               </Heading>
-              <Spacing height={24} />
+              <Spacing height={24} hiddenAt="mobile" />
             </Grid.Col>
-            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450">
+            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450" data-aos-offset="0">
               <Heading size={3} typeface="medium" justify>
                 We build awesome products with a power of user-friendly Design and
                 fast Front-end development.
@@ -53,9 +55,9 @@ const Home = () => (
                 responsive
               />
             </Grid.Col>
-            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550">
-              <Spacing height={48} />
-              <Button>
+            <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550" data-aos-offset="250">
+              <Spacing height={48} hiddenAt="mobile" />
+              <Button className="yo-home-page__start-btn">
                 start a project
               </Button>
             </Grid.Col>
@@ -75,7 +77,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 2 */}
-    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="top-center">
+    <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row>
         <Grid.Col xs={12}>
           <Heading size={2} typeface="bold">
@@ -84,7 +86,7 @@ const Home = () => (
         </Grid.Col>
       </Grid.Row>
 
-      <Spacing height={48} />
+      <Spacing height={48} hiddenAt="mobile" />
 
       <Grid.Row>
         <Grid.Col xs={12} sm={6} md={5}>
@@ -117,7 +119,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 3 */}
-    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="center-center">
+    <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row>
         <Grid.Col xs={12} sm={6}>
           <Heading size={2} typeface="bold">
@@ -144,7 +146,7 @@ const Home = () => (
     </Grid>
 
     {/* SECTION 4 */}
-    <Grid className="yo-home-page__section" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+    <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row>
         <Grid.Col xs={12}>
           <Heading size={2} typeface="bold">
@@ -153,7 +155,7 @@ const Home = () => (
         </Grid.Col>
       </Grid.Row>
 
-      <Spacing height={48} />
+      <Spacing height={48} hiddenAt="mobile" />
 
       <Grid.Row>
         <Grid.Col xs={12} sm={6} md={5}>
@@ -161,7 +163,8 @@ const Home = () => (
             <span className="yo-home-page__title--decorated">for Olena</span>
           </Heading>
 
-          <Spacing height={64} />
+          <Spacing height={64} hiddenAt="mobile" />
+          <Spacing height={24} visibleAt="mobile" />
 
           <Paragraph justify>
             Olena has great designing skills and she gets work done quickly and
@@ -192,7 +195,8 @@ const Home = () => (
             <span className="yo-home-page__title--decorated">for Yevhen</span>
           </Heading>
 
-          <Spacing height={64} />
+          <Spacing height={64} hiddenAt="mobile" />
+          <Spacing height={24} visibleAt="mobile" />
 
           <Paragraph justify>
           Yevhen is an absolute pleasure to work with. He did great work for our

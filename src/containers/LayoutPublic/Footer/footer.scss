@@ -1,4 +1,13 @@
 .yo-footer {
-  margin-bottom: 12.5em;
-  margin-top: 16.25em;
+  // NOTE: All screens, except mobile phones
+  @media (min-width: $media-device--mobile) {
+    margin-bottom: 12.5em;
+    margin-top: 16.25em;
+  }
+
+  // NOTE: Only for mobile phones
+  @media (max-width: $media-device--mobile) {
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
 }

@@ -16,7 +16,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="yo-header" data-aos="fade-down" data-aos-delay="250">
+      <div className="yo-header" data-aos="fade-down" data-aos-delay="250" data-aos-offset="0">
         <Grid>
           <Grid.Row colEqualHeight>
             <Grid.Col xs={3}>

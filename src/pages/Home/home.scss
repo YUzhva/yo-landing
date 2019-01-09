@@ -3,11 +3,25 @@
 .yo-home-page {
   .yo-home-page {
     &__section {
-      margin-top: 14.375em !important;
+      // NOTE: All screens, except mobile phones
+      @media (min-width: $media-device--mobile) {
+        margin-top: 14.375em !important;
+      }
+
+      // NOTE: Only for mobile phones
+      @media (max-width: $media-device--mobile) {
+        margin-top: 1em !important;
+      }
     }
 
     &__title--decorated {
       @include with-border();
+    }
+
+    &__start-btn {
+      @media (max-width: $media-device--mobile) {
+        width: 100%; // make button full width only for mobile phones
+      }
     }
   }
 }
