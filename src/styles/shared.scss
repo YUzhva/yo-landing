@@ -1,0 +1,10 @@
+@import 'styles/vars.scss';
+
+.mobile-only {
+  @media (max-width: $media-device--mobile) {
+    &--center {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
