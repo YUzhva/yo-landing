@@ -7,6 +7,7 @@
   }
 
   .yo-grid__row {
+    // NOTE: All screens, except mobile phones
     @media (min-width: $media-device--mobile) {
       &--equal-height {
         display: flex;
@@ -23,24 +24,53 @@
         }
       }
     }
+
+    // NOTE: Only for mobile phones
+    @media (max-width: $media-device--mobile) {
+      &--mobile-spaced {
+        &-xs {
+          > .yo-grid__col {
+            margin-top: 0.750em;
+          }
+        }
+
+        &-sm {
+          > .yo-grid__col {
+            margin-top: 1.500em;
+          }
+        }
+
+        &-md {
+          > .yo-grid__col {
+            margin-top: 3.000em;
+          }
+        }
+
+        &-lg {
+          > .yo-grid__col {
+            margin-top: 4.000em;
+          }
+        }
+      }
+    }
   }
 
   .yo-grid__col {
+    &--content-align {
+      &-middle {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     // NOTE: All screens, except mobile phones
     @media (min-width: $media-device--mobile) {
       padding: 0 0.75em !important;
-
-      &--content-align {
-        &-middle {
-          display: flex;
-          justify-content: center;
-        }
-      }
     }
 
     // NOTE: Only for mobile phones
     @media (max-width: $media-device--mobile) {
-      padding: 0 1em 3em !important;
+      padding: 0 1.5em !important;
     }
   }
 }

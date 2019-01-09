@@ -11,10 +11,10 @@ const Grid = ({ className = '', ...restProps }) => (
   )
 );
 
-Grid.Row = ({ className = '', colEqualHeight = '', ...restProps }) => (
+Grid.Row = ({ className = '', colEqualHeight = '', colMobileSpaced = '', ...restProps }) => (
   createElement(
     PlainRow,
-    { className: `yo-grid__row${className && ` ${className}`}${colEqualHeight && ' yo-grid__row--equal-height'}`, ...restProps },
+    { className: `yo-grid__row${className && ` ${className}`}${colEqualHeight && ' yo-grid__row--equal-height'}${colMobileSpaced && ` yo-grid__row--mobile-spaced-${colMobileSpaced}`}`, ...restProps },
   )
 );
 
