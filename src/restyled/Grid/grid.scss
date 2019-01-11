@@ -79,6 +79,11 @@
   }
 
   .yo-grid__col {
+    &--no-padding {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
     &--content-align {
       &-middle {
         display: flex;
@@ -88,22 +93,12 @@
 
     // NOTE: All screens, except mobile phones
     @media (min-width: $media-device--mobile) {
-      padding: 0 0.75em !important;
-
-      &--no-padding {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
+      padding: 0 0.75em;
     }
 
     // NOTE: Only for mobile phones
     @media (max-width: $media-device--mobile) {
-      padding: 0 1.5em !important;
-
-      &--no-padding {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
+      padding: 0 1.5em;
     }
   }
 }
