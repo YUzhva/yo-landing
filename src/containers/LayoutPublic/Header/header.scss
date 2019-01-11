@@ -1,30 +1,57 @@
 @import 'styles/mixins.scss';
 
+@import './ButtonMenu/button-menu.scss';
+
 .yo-header {
   // NOTE: All screens, except mobile phones
   @media (min-width: $media-device--mobile) {
     margin-bottom: 9em;
     margin-top: 5.75em;
+
+    &__menu-mobile {
+      display: none;
+    }
   }
 
   // NOTE: Only for mobile phones
   @media (max-width: $media-device--mobile) {
     margin-bottom: 3em;
     margin-top: 4em;
+
+    &__menu-mobile {
+      background-color: $color--white;
+      border-top: 1px solid $color--black;
+      bottom: 0;
+      display: initial;
+      height: 4em;
+      padding: 1em 0 0;
+      position: fixed;
+      transition: opacity 0.5s, transform 0.5s;
+      width: 100%;
+      z-index: 1;
+
+      &--invisible {
+        // opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+
+      &--visible {
+        // opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 
-  .yo-header {
-    &__logo {
-      max-height: 90px;
-    }
+  &__logo {
+    max-height: 90px;
+  }
 
-    &__menu-item {
-      text-decoration: none;
+  &__menu-item {
+    text-decoration: none !important; // Do not style child <a /> tag
 
-      &:hover,
-      &--active {
-        @include with-border();
-      }
+    &:hover,
+    &--active {
+      @include with-border();
     }
   }
 }
