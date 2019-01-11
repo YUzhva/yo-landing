@@ -39,6 +39,12 @@ class LayoutPublic extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   render() {
     return (
       <div className="layout-public">
@@ -59,6 +65,7 @@ class LayoutPublic extends Component {
 
 LayoutPublic.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.string.isRequired,
 };
 
 export default LayoutPublic;
