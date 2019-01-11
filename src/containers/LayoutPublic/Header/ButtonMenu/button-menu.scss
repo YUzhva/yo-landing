@@ -5,7 +5,10 @@
 .yo-btn-menu.yo-btn-menu {
   // Burger
   &__burger {
-    height: 2.813em;
+    background-color: transparent;
+    border: 0;
+    height: 3em;
+    outline: none;
     position: relative;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;

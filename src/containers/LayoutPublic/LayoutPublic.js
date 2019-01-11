@@ -63,9 +63,13 @@ class LayoutPublic extends Component {
   }
 }
 
+LayoutPublic.defaultProps = {
+  location: {},
+};
+
 LayoutPublic.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.string.isRequired,
+  location: PropTypes.shape({}),
 };
 
 export default LayoutPublic;
