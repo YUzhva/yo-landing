@@ -1,0 +1,75 @@
+@import 'styles/vars.scss';
+
+// NOTE: button animation take from: https://codepen.io/designcouch/pen/Atyop
+
+.yo-btn-menu.yo-btn-menu {
+  // Burger
+  &__burger {
+    height: 2.813em;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    width: 3.75em;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    zoom: 0.75;
+
+    span {
+      background: $colcor--gray-dark;
+      border-radius: 0.563em;
+      display: block;
+      height: 0.563em;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+      width: 100%;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 1.125em;
+      }
+
+      &:nth-child(3) {
+        top: 2.25em;
+      }
+    }
+
+    &--opened span {
+      &:nth-child(1) {
+        top: 1.125em;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        top: -0.563em;
+      }
+
+      &:nth-child(3) {
+        top: 1.125em;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+      }
+    }
+  }
+}
