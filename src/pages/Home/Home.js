@@ -15,6 +15,12 @@ import { Grid } from 'restyled';
 import Persons from './images/Persons.svg';
 import Contribute from './images/Contribute.svg';
 
+function triggerCrispChat() {
+  if (window.$crisp && window.$crisp.is('chat:closed')) {
+    window.$crisp.push(['do', 'chat:open']);
+  }
+}
+
 const Home = () => (
   <div className="yo-home-page">
     <Helmet>
@@ -66,7 +72,10 @@ const Home = () => (
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550" data-aos-offset="250">
               <Spacing height={48} />
-              <Button className="yo-home-page__start-btn">
+              <Button
+                className="yo-home-page__start-btn"
+                onClick={triggerCrispChat}
+              >
                 start a project
               </Button>
             </Grid.Col>

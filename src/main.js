@@ -18,7 +18,7 @@ import routes from './routes';
 //   </Provider>
 // );
 
-AOS.init({ once: true, offset: 500 });
+AOS.init({ once: true, offset: 400 });
 
 const MAIN = routes;
 
