@@ -41,10 +41,7 @@ const Yevhen = () => (
         <Spacing height={48} />
         <Paragraph>
           <span role="img" aria-label="wave">👋</span>
-          Hi there.
-          <br />
-          I’m Professional JavaScript Developer, let’s build the next great
-          service together (=
+          Hi there - thank you for being interested in my profile (=
         </Paragraph>
 
         <Spacing height={24} />
@@ -76,7 +73,7 @@ const Yevhen = () => (
         <List>
           <List.Item>
             <span role="img" aria-label="developer">👨‍💻</span>
-            My work motto when I’m starting a new project:
+            My work motto when I&apos;m starting a new project:
           </List.Item>
           <List.Item>
             - minimize the time for familiarization with the project and fully

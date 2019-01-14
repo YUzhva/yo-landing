@@ -56,7 +56,7 @@ const Home = () => (
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450" data-aos-offset="0">
               <Heading size={3} typeface="medium" justify>
-                We build awesome products with a power of user-friendly Design and
+                We build awesome products with the power of user-friendly Design and
                 fast Front-end development.
                 We also enjoy to travel and try new beer tastes.
               </Heading>
@@ -110,7 +110,7 @@ const Home = () => (
         <Grid.Col xs={12} sm={6} md={5}>
           <List>
             <List.Item>
-              UX design (defining personas, user scenarios, user stories, use cases)
+              UX design (personas, user scenarios, use cases)
             </List.Item>
             <List.Item>
               Wireframing
@@ -130,19 +130,19 @@ const Home = () => (
         <Grid.Col xs={12} sm={6} md={5} mdOffset={1}>
           <List>
             <List.Item>
-              UX design (defining personas, user scenarios, user stories, use cases)
+              App estimation and development timeline
             </List.Item>
             <List.Item>
-              Wireframing
+              Technical leading
             </List.Item>
             <List.Item>
-              High-fidelity mockups for web
+              Continuous Integration and Deployment
             </List.Item>
             <List.Item>
-              Mobile applications design
+              Single Page Application (SPA) development
             </List.Item>
             <List.Item>
-              Interactive Prototypes
+              Progressive Web App (PWA) development
             </List.Item>
           </List>
         </Grid.Col>
@@ -206,17 +206,14 @@ const Home = () => (
           </Paragraph>
           <Spacing height={48} />
           <Paragraph justify>
-            Within a few months of working with Olena on KindGeek she handled
-            everything from reviewing the users needs, wireframing ideas
-            complete with all necessary styling to implementing the full UI/UX
-            expertise for our projects. Olena is proficient on all of the latest
-            versions of the most cutting edge design software and is always
-            eager to learn new skills. At Kindgeek she has worked on landing
-            pages, mobile Apps, CRM systems, illustrations and business
-            presentations for some of our clients and few inside projects.
-            She is able to thoroughly focus on every project and is not easily
-            distracted. Additionally, Olena has shown a leadership qualities
-            and good communication skills with our clients.
+            While being work with Olena on KindGeek, she handled everything from
+            reviewing the user&apos;s needs, wireframing ideas complete with all
+            necessary styling to implementing the full UI/UX expertise for our
+            projects. Olena is proficient on all of the latest versions of the
+            most cutting edge design software and is always eager to learn new
+            skills. At Kindgeek she has worked on landing pages, mobile apps,
+            CRM systems, illustrations. Additionally, Olena has shown leadership
+            qualities and good communication skills with our clients.
             <Spacing height={24} />
             <i>Design manager @Kindgeek, May 2018</i>
           </Paragraph>
@@ -231,29 +228,25 @@ const Home = () => (
           <Spacing height={24} visibleAt="mobile" />
 
           <Paragraph justify>
-          Yevhen is an absolute pleasure to work with. He did great work for our
-          React project. He is always available and very open with
-          communication. Top quality work. Very experienced. Very attentive to
-          details. Helped spot a few issues with our API not related to the
-          project. One of the best freelancers we have worked with.
+            We have been working with Yevhen for around a year - he was a part
+            of our front-end remote team. During that time he has proven himself
+            as the talented, fast-growing developer who always was looking for
+            the latest best practices and he was looking for ways of
+            implementing them in our project. Personally, I enjoyed working with
+            him because he always was online for support even outside the
+            working hours.
             <Spacing height={24} />
             <i>Upwork client, December 2018</i>
           </Paragraph>
           <Spacing height={48} />
           <Paragraph justify>
-            Within a few months of working with Olena on KindGeek she handled
-            everything from reviewing the users needs, wireframing ideas
-            complete with all necessary styling to implementing the full UI/UX
-            expertise for our projects. Olena is proficient on all of the latest
-            versions of the most cutting edge design software and is always
-            eager to learn new skills. At Kindgeek she has worked on landing
-            pages, mobile Apps, CRM systems, illustrations and business
-            presentations for some of our clients and few inside projects.
-            She is able to thoroughly focus on every project and is not easily
-            distracted. Additionally, Olena has shown a leadership qualities
-            and good communication skills with our clients.
+            Yevhen is an absolute pleasure to work with. He did great work for
+            our React project. He is always available and very open with
+            communication. Top quality work. Very experienced. Very attentive to
+            details. Helped spot a few issues with our API not related to the
+            project. One of the best freelancers we have worked with.
             <Spacing height={24} />
-            <i>Design manager @Kindgeek, May 2018</i>
+            <i>Upwork client, December 2018</i>
           </Paragraph>
         </Grid.Col>
       </Grid.Row>

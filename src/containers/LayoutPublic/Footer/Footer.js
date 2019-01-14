@@ -9,7 +9,7 @@ const Footer = () => (
       <Grid.Row colEqualHeight colMobileSpaced="md">
         <Grid.Col xs={12} sm={6}>
           <Heading className="mobile-only--center" size={2} typeface="bold">
-            Let’s colaborate together on your <ChangeableText variants={['significant', 'markable', 'essential']} highlight /> project!
+            Let&apos;s colaborate together on your <ChangeableText variants={['significant', 'markable', 'essential']} highlight /> project!
           </Heading>
         </Grid.Col>
 

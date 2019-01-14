@@ -41,14 +41,14 @@ const Olenka = () => (
         <Spacing height={48} />
         <Paragraph>
           <span role="img" aria-label="wave">👩‍💻</span>
-          I’m skilled in user experience, interface and marketing design.
+          I&apos;m skilled in user experience, interface, and marketing design.
         </Paragraph>
         <Spacing height={24} />
         <Paragraph>
           <span role="img" aria-label="wave">🤝</span>
-          Usually collaborate with members of the development and marketing
+          Usually, collaborate with members of the development and marketing
           teams of the product. People describe me as responsible team-player
-          and I’m comfortable taking initiative as well. I’ve worked on social
+          and I&apos;m comfortable taking initiative as well. I&apos;ve worked on social
           & entertainment, agriculture, finance, blockchain projects.
         </Paragraph>
         <Spacing height={24} />
