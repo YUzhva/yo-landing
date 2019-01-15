@@ -16,6 +16,20 @@
   <!-- yo-landing SPA -->
 </body>
 
+<!-- START: Registering Our Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/<%= process.env.SERVICE_WORKER_FILE_NAME %>.js').then(function(registration) {
+        console.log('SW registered: ', registration);
+      }).catch(function(registrationError) {
+        console.log('SW registration failed: ', registrationError);
+      });
+    });
+  }
+</script>
+<!-- END: Registering Our Service Worker -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= process.env.GOOGLE_ANALYTICS_TRACKING_ID %>"></script>
 <script>

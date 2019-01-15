@@ -4,9 +4,11 @@ var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+var WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 var path = require('path');
 
 var common = require('./common.config.js');
+var VARS =  require('./../vars.js');
 
 var rootPath = path.join(__dirname, '..', '..');
 var srcPath = path.join(rootPath, 'src');
@@ -50,6 +52,11 @@ module.exports = merge(common, {
     }),
     new MiniCssExtractPlugin({
       filename: 'dist/styles.[hash].css',
+    }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: (process.env.SERVICE_WORKER_FILE_NAME || VARS.DEFAULT_SERVICE_WORKER_FILE_NAME) + '.js', // eslint-disable-line prefer-template
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
 });
