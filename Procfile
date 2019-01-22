@@ -1,1 +1,1 @@
-web: yarn start:serve-static
+web: yarn start:server
