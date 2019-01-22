@@ -8,12 +8,12 @@ import { Footer } from './Footer';
 
 class LayoutPublic extends Component {
   state = {
-    isLandingLoadedPreviously: !!window.sessionStorage.getItem('isLandingLoadedPreviously'),
+    isLandingLoadedPreviously: false,
   };
 
   componentDidMount() {
     this.isTimeoutFinished = false;
-    const { isLandingLoadedPreviously } = this.state;
+    const isLandingLoadedPreviously = !!(window && window.sessionStorage.getItem('isLandingLoadedPreviously'));
 
     if (!isLandingLoadedPreviously) {
       // NOTE: because of avoiding loader animation during page refresh
@@ -36,11 +36,13 @@ class LayoutPublic extends Component {
           this.setState({ isLandingLoadedPreviously: true });
         }
       }, 1500);
+    } else {
+      this.setState({ isLandingLoadedPreviously: true });
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
+    if ((this.props.location !== prevProps.location)) {
       window.scrollTo(0, 0);
     }
   }
