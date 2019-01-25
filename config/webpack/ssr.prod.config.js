@@ -26,6 +26,7 @@ module.exports = [
         swDest: (process.env.SERVICE_WORKER_FILE_NAME || VARS.DEFAULT_SERVICE_WORKER_FILE_NAME) + '.js', // eslint-disable-line prefer-template
         clientsClaim: true,
         skipWaiting: true,
+        directoryIndex: 'server.html',
       }),
     ],
   }, prodConfig),
