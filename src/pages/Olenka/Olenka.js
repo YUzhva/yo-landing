@@ -62,28 +62,48 @@ const Olenka = () => (
         <Grid.Row className="mobile-only--center" colMobileSpaced="md">
           <Grid.Col xs={6} sm={3} lg={2}>
             <Heading color="yellow" size={4}>
-              <a href="https://www.linkedin.com/in/olenatomchuk/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/olenatomchuk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 linkedin
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} lg={2}>
             <Heading color="yellow" size={4}>
-              <a href="https://dribbble.com/o_tomchuk/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://dribbble.com/o_tomchuk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+              >
                 dribbble
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} lg={2}>
             <Heading color="yellow" size={4}>
-              <a href="https://www.upwork.com/freelancers/~01c62b2e955c1e036b/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.upwork.com/freelancers/~01c62b2e955c1e036b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="UpWork"
+              >
                 upwork
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} lg={2}>
             <Heading color="yellow" size={4}>
-              <a href="https://join.skype.com/invite/gt1WTcqRsJGA/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://join.skype.com/invite/gt1WTcqRsJGA/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Skype"
+              >
                 skype
               </a>
             </Heading>
@@ -123,7 +143,10 @@ const Olenka = () => (
 
     <Grid.Row colEqualHeight colMobileSpaced="sm" data-aos="fade-up">
       <Grid.Col xs={12} sm={4}>
-        <ProjectCard href="https://cloudcoach.com/">
+        <ProjectCard
+          href="https://cloudcoach.com/"
+          ariaLabel="cloudcoach.com - Responsive web-site redesign"
+        >
           <Image src={ImgCloudcoach} alt="cloudcoach-project" responsive />
           <Heading size={4} fontface="bold" center>
             cloudcoach.com
@@ -136,7 +159,10 @@ const Olenka = () => (
         </ProjectCard>
       </Grid.Col>
       <Grid.Col xs={12} sm={4}>
-        <ProjectCard href="https://www.cropstream.com/">
+        <ProjectCard
+          href="https://www.cropstream.com/"
+          ariaLabel="cropstream.com - Work on design system, redesign of iOS application, designing of Android mobile app."
+        >
           <Image src={ImgCropstream} alt="cropstream-project" responsive />
           <Heading size={4} fontface="bold" center>
             cropstream.com

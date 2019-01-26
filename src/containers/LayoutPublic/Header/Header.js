@@ -27,7 +27,7 @@ class Header extends Component {
           <Grid>
             <Grid.Row colEqualHeight colMobileEqual="middle">
               <Grid.Col xs={4}>
-                <NavLink to="/" onClick={this.closeMobileMenu}>
+                <NavLink to="/" onClick={this.closeMobileMenu} aria-label="Home page">
                   <Image src={YOLogo} className="yo-header__logo" alt="yo-logo" responsive />
                 </NavLink>
               </Grid.Col>
@@ -56,6 +56,7 @@ class Header extends Component {
                     to="/olenka"
                     className="yo-header__menu-item"
                     activeClassName="yo-header__menu-item--active"
+                    aria-label="About Olenka page"
                   >
                     about Olenka
                   </NavLink>
@@ -64,19 +65,10 @@ class Header extends Component {
                     to="/yevhen"
                     className="yo-header__menu-item"
                     activeClassName="yo-header__menu-item--active"
+                    aria-label="About Yevhen page"
                   >
                     about Yevhen
                   </NavLink>
-                  {/*
-                  <Spacing width={24} />
-                  <NavLink
-                    to="#"
-                    className="yo-header__menu-item"
-                    activeClassName="yo-header__menu-item--active"
-                  >
-                    contact us
-                  </NavLink>
-                  */}
                 </Heading>
               </Grid.Col>
             </Grid.Row>
@@ -96,6 +88,7 @@ class Header extends Component {
                     to="/olenka"
                     className="yo-header__menu-item"
                     activeClassName="yo-header__menu-item--active"
+                    aria-label="About Olenka page"
                   >
                     about Olenka
                   </NavLink>
@@ -105,6 +98,7 @@ class Header extends Component {
                     to="/yevhen"
                     className="yo-header__menu-item"
                     activeClassName="yo-header__menu-item--active"
+                    aria-label="About Yevhen page"
                   >
                     about Yevhen
                   </NavLink>

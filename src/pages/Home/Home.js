@@ -75,6 +75,7 @@ const Home = () => (
               <Button
                 className="yo-home-page__start-btn"
                 onClick={triggerCrispChat}
+                aria-label="Start a project"
               >
                 start a project
               </Button>
@@ -161,11 +162,21 @@ const Home = () => (
 
           <Paragraph>React leaflet markercluster.</Paragraph>
           <Heading color="yellow" size={4} inline>
-            <a href="https://github.com/YUzhva/react-leaflet-markercluster/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/YUzhva/react-leaflet-markercluster/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="React leaflet markercluster GitHub code"
+            >
               code
             </a>
             <Spacing width={12} />
-            <a href="https://yuzhva.github.io/react-leaflet-markercluster/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://yuzhva.github.io/react-leaflet-markercluster/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="React leaflet markercluster live demonstration"
+            >
               demo
             </a>
           </Heading>

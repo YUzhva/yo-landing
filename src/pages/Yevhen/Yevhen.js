@@ -95,28 +95,48 @@ const Yevhen = () => (
         <Grid.Row colMobileSpaced="md">
           <Grid.Col xs={6} sm={3} md={3} lg={2}>
             <Heading color="yellow" size={4} center>
-              <a href="https://www.linkedin.com/in/yuzhva/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/yuzhva/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 linkedin
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} md={3} lg={2}>
             <Heading color="yellow" size={4} center>
-              <a href="https://github.com/YUzhva/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/YUzhva/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
                 github
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} md={3} lg={2}>
             <Heading color="yellow" size={4} center>
-              <a href="https://www.upwork.com/freelancers/~01c985f324d94452f7/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.upwork.com/freelancers/~01c985f324d94452f7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="UpWork"
+              >
                 upwork
               </a>
             </Heading>
           </Grid.Col>
           <Grid.Col xs={6} sm={3} md={3} lg={2}>
             <Heading color="yellow" size={4} center>
-              <a href="https://join.skype.com/invite/ntkyJzp3pREW/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://join.skype.com/invite/ntkyJzp3pREW/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Skype"
+              >
                 skype
               </a>
             </Heading>
@@ -154,7 +174,10 @@ const Yevhen = () => (
 
     <Grid.Row colEqualHeight colMobileSpaced="sm" data-aos="fade-up">
       <Grid.Col xs={12} sm={4}>
-        <ProjectCard href="https://buddy.com/">
+        <ProjectCard
+          href="https://buddy.com/"
+          ariaLabel="buddy.com - Working with analytics for IoT data."
+        >
           <Image src={ImgBuddy} alt="buddy-logo" responsive />
           <Spacing height={64} />
           <Heading size={4} fontface="bold" center>
@@ -168,7 +191,10 @@ const Yevhen = () => (
         </ProjectCard>
       </Grid.Col>
       <Grid.Col xs={12} sm={4}>
-        <ProjectCard href="https://publbox.com/">
+        <ProjectCard
+          href="https://publbox.com/"
+          ariaLabel="publbox.com - UI library. Optimization of app loading time."
+        >
           <Image src={ImgPublBox} alt="publbox-logo" responsive />
           <Spacing height={64} />
           <Heading size={4} fontface="bold" center>

@@ -21,6 +21,7 @@ const Footer = () => (
             <a
               href="mailto:ask@yoyoyo.pro"
               className="colored-black circular-book font-size-small"
+              aria-label="Contact us ask@yoyoyo.pro"
             >
               ask@yoyoyo.pro
             </a>

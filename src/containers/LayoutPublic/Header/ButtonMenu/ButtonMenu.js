@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ButtonBurger = ({ isOpen, onClick }) => (
+const ButtonMenu = ({ isOpen, onClick }) => (
   <button
     type="button"
     className={`yo-btn-menu yo-btn-menu__burger yo-btn-menu__burger--${isOpen ? 'opened' : 'closed'}`}
     onClick={onClick}
+    aria-label="Menu button"
   >
     <span />
     <span />
@@ -13,13 +14,13 @@ const ButtonBurger = ({ isOpen, onClick }) => (
   </button>
 );
 
-ButtonBurger.defaultProps = {
+ButtonMenu.defaultProps = {
   isOpen: false,
 };
 
-ButtonBurger.propTypes = {
+ButtonMenu.propTypes = {
   isOpen: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };
 
-export default ButtonBurger;
+export default ButtonMenu;
