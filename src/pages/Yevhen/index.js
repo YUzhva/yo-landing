@@ -1,1 +1,3 @@
-export { default as Yevhen } from './Yevhen';
+import { splitCode } from 'hocs';
+
+export default splitCode({ resolve: () => import(/* webpackChunkName: "Yevhen" */'./Yevhen') });

@@ -1,1 +1,3 @@
-export { default as Olenka } from './Olenka';
+import { splitCode } from 'hocs';
+
+export default splitCode({ resolve: () => import(/* webpackChunkName: "Olenka" */'./Olenka') });

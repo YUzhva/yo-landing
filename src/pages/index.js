@@ -1,3 +1,3 @@
-export { Home } from './Home';
-export { Olenka } from './Olenka';
-export { Yevhen } from './Yevhen';
+export { default as Home } from './Home';
+export { default as Olenka } from './Olenka';
+export { default as Yevhen } from './Yevhen';
