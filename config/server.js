@@ -6,7 +6,8 @@ require('./global').init();
 var express = require('express');
 var proxy = require('http-proxy-middleware');
 var path = require('path');
-var fs = require("fs");
+var fs = require('fs');
+var compression = require('compression');
 
 var proxyConfig = require('./proxy');
 
@@ -18,7 +19,7 @@ import Loadable from 'react-loadable';
 import ProvideServerReactApp from '../src/server';
 /* eslint-enable */
 
-
+app.use(compression());
 app.use(express.static('public'));
 
 // get all path wich is not starts from api
