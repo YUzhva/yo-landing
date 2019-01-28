@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/lib/Image';
 
@@ -22,7 +22,7 @@ class Header extends Component {
 
   render() {
     return (
-      <Fragment>
+      <header>
         <div className="yo-header" data-aos="fade-down" data-aos-delay="250" data-aos-offset="0">
           <Grid>
             <Grid.Row colEqualHeight colMobileEqual="middle">
@@ -52,23 +52,25 @@ class Header extends Component {
                 xsHidden
               >
                 <Heading size={4} typeface="bold" inline>
-                  <NavLink
-                    to="/olenka"
-                    className="yo-header__menu-item"
-                    activeClassName="yo-header__menu-item--active"
-                    aria-label="About Olenka page"
-                  >
-                    about Olenka
-                  </NavLink>
-                  <Spacing width={24} />
-                  <NavLink
-                    to="/yevhen"
-                    className="yo-header__menu-item"
-                    activeClassName="yo-header__menu-item--active"
-                    aria-label="About Yevhen page"
-                  >
-                    about Yevhen
-                  </NavLink>
+                  <nav>
+                    <NavLink
+                      to="/olenka"
+                      className="yo-header__menu-item"
+                      activeClassName="yo-header__menu-item--active"
+                      aria-label="About Olenka page"
+                    >
+                      about Olenka
+                    </NavLink>
+                    <Spacing width={24} />
+                    <NavLink
+                      to="/yevhen"
+                      className="yo-header__menu-item"
+                      activeClassName="yo-header__menu-item--active"
+                      aria-label="About Yevhen page"
+                    >
+                      about Yevhen
+                    </NavLink>
+                  </nav>
                 </Heading>
               </Grid.Col>
             </Grid.Row>
@@ -107,7 +109,7 @@ class Header extends Component {
             </Heading>
           </Grid>
         </div>
-      </Fragment>
+      </header>
     );
   }
 }

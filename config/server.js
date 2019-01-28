@@ -17,6 +17,7 @@ import ReactDOMServer from 'react-dom/server';
 import ProvideServerReactApp from '../src/server';
 /* eslint-enable */
 
+
 app.use(express.static('public'));
 
 // get all path wich is not starts from api

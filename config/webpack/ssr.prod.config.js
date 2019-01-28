@@ -21,6 +21,7 @@ module.exports = [
       new HtmlWebpackPlugin({
         template: path.join(paths.src, 'index.prod.template.html'),
         filename: 'server.html',
+        favicon: path.join(paths.src, 'media', 'favicon.png'),
       }),
       new WorkboxWebpackPlugin.GenerateSW({
         swDest: (process.env.SERVICE_WORKER_FILE_NAME || VARS.DEFAULT_SERVICE_WORKER_FILE_NAME) + '.js', // eslint-disable-line prefer-template

@@ -1,1 +1,1 @@
-export { LayoutPublic } from './LayoutPublic';
+export { default as LayoutPublic } from './LayoutPublic';

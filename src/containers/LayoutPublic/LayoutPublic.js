@@ -50,16 +50,11 @@ class LayoutPublic extends Component {
   render() {
     return (
       <div className="layout-public">
-        <Loader isInProgress={!this.state.isLandingLoadedPreviously} />
-        {
-          this.state.isLandingLoadedPreviously && (
-            <Fragment>
-              <Header />
-              {this.props.children}
-              <Footer />
-            </Fragment>
-          )
-        }
+        <Header />
+        <main className="layout-public__main-content">
+          {this.props.children}
+        </main>
+        <Footer />
       </div>
     );
   }

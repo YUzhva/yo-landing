@@ -13,7 +13,7 @@ const splitCode = ({ resolve }) => {
       const { module } = this.state;
 
       // if (!module) return null;
-      return module ? createElement(module) : null;
+      return module ? createElement(module, this.props) : null;
     }
   }
 

@@ -1,2 +1,9 @@
 @import './Header/header.scss';
-@import './Footer/footer.scss'
+@import './Footer/footer.scss';
+
+.layout-public {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}

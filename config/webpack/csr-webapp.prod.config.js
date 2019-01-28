@@ -15,7 +15,10 @@ var VARS =  require('../vars.js');
 
 module.exports = merge(csrWebappConfig, prodConfig, {
   plugins: [
-    new HtmlWebpackPlugin({ template: path.join(paths.src, 'index.prod.template.html') }),
+    new HtmlWebpackPlugin({
+      template: path.join(paths.src, 'index.prod.template.html'),
+      favicon: path.join(paths.src, 'media', 'favicon.png'),
+    }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: (process.env.SERVICE_WORKER_FILE_NAME || VARS.DEFAULT_SERVICE_WORKER_FILE_NAME) + '.js', // eslint-disable-line prefer-template
       clientsClaim: true,

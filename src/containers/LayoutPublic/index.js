@@ -1,1 +1,4 @@
-export { default as LayoutPublic } from './LayoutPublic';
+// export { default } from './LayoutPublic';
+import { splitCode } from 'hocs';
+
+export default splitCode({ resolve: () => import(/* webpackChunkName: "LayoutPublic" */'./LayoutPublic') });
