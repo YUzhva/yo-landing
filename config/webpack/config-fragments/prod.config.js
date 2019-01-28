@@ -2,6 +2,7 @@
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var path = require('path');
 var paths = require('./paths');
@@ -26,5 +27,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'dist/styles.[hash].css',
     }),
+    new CopyWebpackPlugin([
+      { from: path.join(paths.src, 'static') },
+    ]),
   ],
 };
