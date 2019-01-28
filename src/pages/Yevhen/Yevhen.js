@@ -21,8 +21,13 @@ const Yevhen = () => (
   <Grid>
     <Helmet>
       <title>
-        Yevhen, Front-End developer
+        Yevhen Uzhva, Front-End developer
       </title>
+
+      <meta name="description" content="Expert front-end developer, using ES6, React + Redux in most of the projects for SPA and PWA web applications development. Top-Rated Freelancer." />
+      <meta name="keywords" content="yevhen, uzhva, react, front-end, developer, top rated, upwork, best, freelancer, to hire, 2019, agency" />
+
+      <meta property="og:image" content={ImgYevhen} />
     </Helmet>
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">
@@ -36,7 +41,7 @@ const Yevhen = () => (
     <Grid.Row colMobileSpaced="sm" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
       <Grid.Col xs={12} sm={6}>
         <Heading className="mobile-only--center" size={3} typeface="bold">
-          Yevhen, Front-End developer
+          Yevhen Uzhva, Front-End developer
         </Heading>
         <Spacing height={48} />
         <Paragraph>
@@ -76,8 +81,8 @@ const Yevhen = () => (
             My work motto when I&apos;m starting a new project:
           </List.Item>
           <List.Item>
-            - minimize the time for familiarization with the project and fully
-            understand the client needs;
+            - minimize the time of project familiarization and fully understand
+            the client needs;
           </List.Item>
           <List.Item>
             - create such an architecture and divide Components on such a way, so
@@ -87,7 +92,7 @@ const Yevhen = () => (
         <Spacing height={24} />
         <Paragraph>
           <span role="img" aria-label="beer">🍻</span>
-          Looking forward to work with you!
+          Looking forward to working with you!
         </Paragraph>
 
         <Spacing height={64} hiddenAt="mobile" />

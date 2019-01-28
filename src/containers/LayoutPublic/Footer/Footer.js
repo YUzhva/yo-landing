@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, ChangeableText, Spacing } from 'components';
+import { Heading, ChangeableText } from 'components';
 import { Grid } from 'restyled';
 
 const Footer = () => (
