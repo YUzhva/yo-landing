@@ -14,6 +14,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 import ReactDOMServer from 'react-dom/server';
+import Loadable from 'react-loadable';
 import ProvideServerReactApp from '../src/server';
 /* eslint-enable */
 
@@ -39,4 +40,6 @@ app.get(/^\/+(?!api)/, (req, res) => {
 app.use('/api', proxy(proxyConfig['/api/']));
 app.use('/api-local', proxy(proxyConfig['/api-local/']));
 
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+Loadable.preloadReady().then(() => {
+  app.listen(port, () => console.log(`App listening on port ${port}!`));
+});

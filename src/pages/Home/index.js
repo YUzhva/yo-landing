@@ -1,3 +1,9 @@
-import { splitCode } from 'hocs';
+import Loadable from 'react-loadable';
 
-export default splitCode({ resolve: () => import(/* webpackChunkName: "Home" */'./Home') });
+export default Loadable({
+  loader: () => import(/* webpackChunkName: "Home" */'./Home'),
+  loading: () => null,
+});
+
+// import { splitCode } from 'hocs';
+// export default splitCode({ resolve: () => import(/* webpackChunkName: "Home" */'./Home') });

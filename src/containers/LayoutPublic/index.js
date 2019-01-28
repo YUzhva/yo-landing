@@ -1,4 +1,9 @@
-// export { default } from './LayoutPublic';
-import { splitCode } from 'hocs';
+import Loadable from 'react-loadable';
 
-export default splitCode({ resolve: () => import(/* webpackChunkName: "LayoutPublic" */'./LayoutPublic') });
+export default Loadable({
+  loader: () => import(/* webpackChunkName: "LayoutPublic" */'./LayoutPublic'),
+  loading: () => null,
+});
+
+// import { splitCode } from 'hocs';
+// export default splitCode({ resolve: () => import(/* webpackChunkName: "LayoutPublic" */'./LayoutPublic') });
