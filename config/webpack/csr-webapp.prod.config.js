@@ -15,7 +15,7 @@ var prodConfig = require('./config-fragments/prod.config.js');
 var VARS =  require('../vars.js');
 /* eslint-enable */
 
-module.exports = merge(csrWebappConfig, prodConfig, {
+module.exports = merge(csrWebappConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(paths.src, 'index.prod.template.html'),
@@ -35,6 +35,8 @@ module.exports = merge(csrWebappConfig, prodConfig, {
       short_name: 'YO! mates',
       description: 'We build awesome products with the power of user-friendly Design and scalable Front-end architecture.',
       background_color: '#ffce00',
+      theme_color: '#ffce00',
+      start_url: '/',
       icons: [
         {
           src: path.join(paths.src, 'media', 'favicon.png'),
@@ -44,4 +46,4 @@ module.exports = merge(csrWebappConfig, prodConfig, {
       ],
     }),
   ],
-});
+}, prodConfig);

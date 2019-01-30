@@ -40,6 +40,8 @@ module.exports = [
         short_name: 'YO! mates',
         description: 'We build awesome products with the power of user-friendly Design and scalable Front-end architecture.',
         background_color: '#ffce00',
+        theme_color: '#ffce00',
+        start_url: '/',
         icons: [
           {
             src: path.join(paths.src, 'media', 'favicon.png'),
