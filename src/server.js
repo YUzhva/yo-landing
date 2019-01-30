@@ -1,16 +1,19 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
+import { HelmetProvider } from 'react-helmet-async';
 import { StaticRouter } from 'react-router-dom';
 
-import reduxStore from './redux-store';
+// import reduxStore from './redux-store';
 import routes from './routes';
 
-const ProvideServerReactApp = (requestUrl, context) => (
-  <Provider store={reduxStore}>
+// <Provider store={reduxStore}>
+const ProvideServerReactApp = (requestUrl, context, helmetContext) => (
+  <HelmetProvider context={helmetContext}>
     <StaticRouter location={requestUrl} context={context}>
       {routes}
     </StaticRouter>
-  </Provider>
+  </HelmetProvider>
 );
+// </Provider>
 
 export default ProvideServerReactApp;

@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Provider } from 'react-redux';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 
 import AOS from 'aos';
@@ -19,9 +20,11 @@ preloadImages([ImgYevhenAndOlenkaAsLego, ImgYevhen, ImgOlenka]);
 
 // <Provider store={reduxStore}>
 const BrowserReactApp = (
-  <BrowserRouter>
-    {routes}
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      {routes}
+    </BrowserRouter>
+  </HelmetProvider>
 );
 // </Provider>
 

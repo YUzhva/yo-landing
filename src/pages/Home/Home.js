@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/lib/Image';
-import { Helmet } from 'react-helmet';
+import Helmet from 'react-helmet-async';
 
 import {
   ChangeableText,

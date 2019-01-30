@@ -26,14 +26,25 @@ app.use(express.static('public'));
 app.get(/^\/+(?!api)/, (req, res) => {
   fs.readFile(path.resolve('public', 'server.html'), 'utf8', (err, htmlData) => {
     // https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/StaticRouter.md#context-object
-    const context = {};
     if (err) { return res.status(404).end(); }
 
+    const context = {};
+    const helmetContext = {};
+
+    const stringifiedReactApp = ReactDOMServer.renderToString(
+      ProvideServerReactApp(req.url, context, helmetContext),
+    );
+
+    const { helmet } = helmetContext;
+
     return res.send(
-      htmlData.replace(
-        '<div id="yo-landing"></div>',
-        `<div id="yo-landing">${ReactDOMServer.renderToString(ProvideServerReactApp(req.url, context))}</div>`,
-      ),
+      htmlData
+        .replace(/<title[^>]*>([^<]+)<\/title>/, helmet.title.toString())
+        .replace(/<\/head>/, helmet.meta.toString() + '</head>') // eslint-disable-line prefer-template
+        .replace(
+          '<div id="yo-landing"></div>',
+          `<div id="yo-landing">${stringifiedReactApp}</div>`,
+        ),
     );
   });
 });
@@ -42,5 +53,6 @@ app.use('/api', proxy(proxyConfig['/api/']));
 app.use('/api-local', proxy(proxyConfig['/api-local/']));
 
 Loadable.preloadReady().then(() => {
+  // eslint-disable-next-line no-console
   app.listen(port, () => console.log(`App listening on port ${port}!`));
 });
