@@ -40,7 +40,7 @@ const Olenka = () => (
 
     <Grid.Row colMobileSpaced="sm" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
       <Grid.Col xs={12} sm={6}>
-        <Heading className="mobile-only--center" size={3} typeface="bold">
+        <Heading className="mobile-only--center" size={3} weight="bold">
           Olenka, UX/UI Designer
         </Heading>
         <Spacing height={48} />
@@ -119,7 +119,7 @@ const Olenka = () => (
       <Grid.Col xs={12} sm={4} smOffset={2}>
         <Grid.Row colMobileSpaced="sm">
           <Grid.Col xs={12}>
-            <Heading size={4} typeface="bold">
+            <Heading size={4} weight="bold">
               <ChangeableText variants={['expert', 'guru', 'ninja']} /> at:
             </Heading>
           </Grid.Col>

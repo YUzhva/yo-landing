@@ -51,7 +51,7 @@ class Header extends Component {
                 contentAlign="middle"
                 xsHidden
               >
-                <Heading size={4} typeface="bold" inline>
+                <Heading size={4} weight="bold" inline>
                   <nav>
                     <NavLink
                       to="/olenka"
@@ -81,7 +81,7 @@ class Header extends Component {
           <Grid>
             <Heading
               size={4}
-              typeface="bold"
+              weight="bold"
               center
             >
               <Grid.Row>

@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 const withTypography = (WrappedComponent) => {
   const WrappedComponentWithTypography = ({
-    center, className, color, justify, inline, typeface, ...props
+    center, className, color, justify, inline, weight, ...props
   }) => {
     const dataAttr = {};
     const rest = {};
@@ -24,7 +24,7 @@ const withTypography = (WrappedComponent) => {
           [`ms-typography--color-${color}`]: color,
           'ms-typography--justify': justify,
           'ms-typography--inline': inline,
-          [`ms-typography--typeface-${typeface}`]: typeface,
+          [`ms-typography--weight-${weight}`]: weight,
         })}
         dataAttr={dataAttr}
         {...rest}
@@ -38,7 +38,7 @@ const withTypography = (WrappedComponent) => {
     color: 'black',
     justify: false,
     inline: false,
-    typeface: 'book',
+    weight: 'regular',
   };
 
   WrappedComponentWithTypography.propTypes = {
@@ -47,7 +47,7 @@ const withTypography = (WrappedComponent) => {
     color: PropTypes.oneOf(['black', 'yellow']),
     justify: PropTypes.bool,
     inline: PropTypes.bool,
-    typeface: PropTypes.oneOf(['bold', 'book', 'medium']),
+    weight: PropTypes.oneOf(['regular', 'medium', 'bold']),
   };
 
   return WrappedComponentWithTypography;

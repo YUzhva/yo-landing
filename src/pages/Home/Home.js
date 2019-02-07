@@ -41,13 +41,13 @@ const Home = () => (
           {/* DEPENDING CONTENT */}
           <Grid.Row colMobileSpaced="sm">
             <Grid.Col xs={12}>
-              <Heading className="mobile-only--center" color="yellow" typeface="bold">
+              <Heading className="mobile-only--center" color="yellow" weight="bold">
                 <ChangeableText variants={['Bonjour', '👋', 'Hello', 'Привіт', 'Hola']} />
               </Heading>
               <Spacing height={12} hiddenAt="mobile" />
               <Heading
                 size={2}
-                typeface="bold"
+                weight="bold"
                 className="mobile-only--center"
                 data-aos="fade-up"
                 data-aos-delay="350"
@@ -60,7 +60,7 @@ const Home = () => (
               <Spacing height={24} />
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450" data-aos-offset="0">
-              <Heading size={3} typeface="medium" justify>
+              <Heading size={3} weight="medium" justify>
                 We build awesome products with the power of user-friendly Design and
                 scalable Front-end architecture.
                 {/* We enjoy traveling and tasting the new beer flavors. */}
@@ -104,7 +104,7 @@ const Home = () => (
     <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row>
         <Grid.Col xs={12}>
-          <Heading size={2} typeface="bold">
+          <Heading size={2} weight="bold">
             Services, that we provide
           </Heading>
         </Grid.Col>
@@ -159,7 +159,7 @@ const Home = () => (
     <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row colMobileSpaced="md" colEqualHeight>
         <Grid.Col xs={12} sm={6}>
-          <Heading size={2} typeface="bold">
+          <Heading size={2} weight="bold">
             Contributing to open-source
           </Heading>
 
@@ -196,7 +196,7 @@ const Home = () => (
     <Grid className="yo-home-page__section" data-aos="fade-up">
       <Grid.Row>
         <Grid.Col xs={12}>
-          <Heading size={2} typeface="bold">
+          <Heading size={2} weight="bold">
             Testimonials
           </Heading>
         </Grid.Col>
@@ -206,7 +206,7 @@ const Home = () => (
 
       <Grid.Row colMobileSpaced="lg">
         <Grid.Col xs={12} sm={6} md={5}>
-          <Heading size={4} typeface="bold">
+          <Heading size={4} weight="bold">
             <span className="yo-home-page__title--decorated">for Olena</span>
           </Heading>
 
@@ -236,7 +236,7 @@ const Home = () => (
         </Grid.Col>
 
         <Grid.Col xs={12} sm={6} md={5} mdOffset={1}>
-          <Heading size={4} typeface="bold">
+          <Heading size={4} weight="bold">
             <span className="yo-home-page__title--decorated">for Yevhen</span>
           </Heading>
 
