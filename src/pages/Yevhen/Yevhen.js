@@ -14,6 +14,7 @@ import {
 import { Grid } from 'restyled';
 
 import ImgYevhen from './Yevhen.svg';
+import ImgYevhenForSocials from './Yevhen.png';
 import ImgBuddy from './buddy-logo.png';
 import ImgPublBox from './publbox-logo.png';
 
@@ -27,7 +28,7 @@ const Yevhen = () => (
       <meta name="description" content="Expert front-end developer, using ES6, React + Redux in most of the projects for SPA and PWA web applications development. Top-Rated Freelancer." />
       <meta name="keywords" content="yevhen, uzhva, react, front-end, developer, top rated, upwork, best, freelancer, to hire, 2019, agency" />
 
-      <meta property="og:image" content={ImgYevhen} />
+      <meta property="og:image" content={ImgYevhenForSocials} />
     </Helmet>
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">

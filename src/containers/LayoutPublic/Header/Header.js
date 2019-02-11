@@ -34,7 +34,7 @@ class Header extends Component {
 
               <Grid.Col
                 xs={8}
-                className="text-right"
+                className="yo-header__navigation"
                 smHidden
                 mdHidden
                 lgHidden
@@ -47,7 +47,7 @@ class Header extends Component {
 
               <Grid.Col
                 sm={8}
-                className="text-right"
+                className="yo-header__navigation"
                 contentAlign="middle"
                 xsHidden
               >

@@ -46,6 +46,10 @@
     max-height: 90px;
   }
 
+  &__navigation {
+    text-align: right;
+  }
+
   &__menu-item {
     text-decoration: none !important; // Do not style child <a /> tag
 

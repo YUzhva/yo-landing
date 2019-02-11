@@ -1,8 +1,8 @@
 @import '~styles/vars';
 
 // Thirds party libraries
-@import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~aos/dist/aos.css';
+@import './vendor/bootstrap.min.css';
 
 // Components
 @import 'components/ChangeableText/changeable-text.scss';

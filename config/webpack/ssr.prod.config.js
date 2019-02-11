@@ -24,7 +24,12 @@ module.exports = [
         template: path.join(paths.src, 'index.prod.template.html'),
         filename: 'server.html',
         favicon: path.join(paths.src, 'media', 'favicon.png'),
-        minify: true,
+        minify: {
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+        },
       }),
       new WorkboxWebpackPlugin.GenerateSW({
         swDest: (process.env.SERVICE_WORKER_FILE_NAME || VARS.DEFAULT_SERVICE_WORKER_FILE_NAME) + '.js', // eslint-disable-line prefer-template

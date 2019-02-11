@@ -14,6 +14,7 @@ import {
 import { Grid } from 'restyled';
 
 import ImgOlenka from './Olenka.svg';
+import ImgOlenkaForSocials from './Olenka.png';
 import ImgCloudcoach from './cloudcoach-project.png';
 import ImgCropstream from './cropstream-project.png';
 
@@ -27,7 +28,7 @@ const Olenka = () => (
       <meta name="description" content="Expert in user experience (UX), interface (UI), and marketing design. I've worked on agriculture, finance, blockchain projects. Top-Rated Freelancer." />
       <meta name="keywords" content="olenka, tomchuk, ux, ui, designer, top rated, upwork, best, freelancer, to hire, 2019, agency" />
 
-      <meta property="og:image" content={ImgOlenka} />
+      <meta property="og:image" content={ImgOlenkaForSocials} />
     </Helmet>
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">

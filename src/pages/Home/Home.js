@@ -13,6 +13,7 @@ import {
 import { Grid } from 'restyled';
 
 import Persons from './images/Persons.svg';
+import PersonsForSocials from './images/Persons.png';
 import Contribute from './images/Contribute.svg';
 
 function triggerCrispChat() {
@@ -31,7 +32,7 @@ const Home = () => (
       <meta name="description" content="We build awesome products with the power of user-friendly Design and scalable Front-end architecture." />
       <meta name="keywords" content="best, awesome, great, fresh, new, landing, page, web app, mobile app, design, development, 2019, portfolio, top rated, upwork, best, agency, to hire, 2019" />
 
-      <meta property="og:image" content={Persons} />
+      <meta property="og:image" content={PersonsForSocials} />
     </Helmet>
 
     {/* SECTION 1 */}

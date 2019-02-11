@@ -1,7 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet-async';
 
 import { Loader } from 'components';
+
+import circularStdBold from 'media/fonts/CircularStd-Bold.woff';
+import circularStdBook from 'media/fonts/CircularStd-Book.woff';
+import circularStdMedium from 'media/fonts/CircularStd-Medium.woff';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -50,6 +55,29 @@ class LayoutPublic extends Component {
   render() {
     return (
       <div className="layout-public">
+        <Helmet>
+          <link
+            rel="preload"
+            href={circularStdBold}
+            as="font"
+            type="font/woff"
+            crossOrigin
+          />
+          <link
+            rel="preload"
+            href={circularStdBook}
+            as="font"
+            type="font/woff"
+            crossOrigin
+          />
+          <link
+            rel="preload"
+            href={circularStdMedium}
+            as="font"
+            type="font/woff"
+            crossOrigin
+          />
+        </Helmet>
         <Header />
         <main className="layout-public__main-content">
           {this.props.children}

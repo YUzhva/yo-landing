@@ -22,6 +22,17 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
+    // Create a vendors chunk, which includes all code from node_modules in the whole application.
+    // https://webpack.js.org/plugins/split-chunks-plugin/#split-chunks-example-2
+    // splitChunks: {
+    //   cacheGroups: {
+    //     commons: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all',
+    //     },
+    //   },
+    // },
   },
   plugins: [
     new MiniCssExtractPlugin({

@@ -11,6 +11,8 @@ var compression = require('compression');
 
 var proxyConfig = require('./proxy');
 
+var VARS =  require('./vars.js');
+
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -20,7 +22,7 @@ import ProvideServerReactApp from '../src/server';
 /* eslint-enable */
 
 app.use(compression());
-app.use(express.static('public'));
+app.use(express.static('public', { maxAge: VARS.MILLISECONDS_IN_ONE_DAY * 90 }));
 
 // get all path wich is not starts from api
 app.get(/^\/+(?!api)/, (req, res) => {
@@ -40,7 +42,7 @@ app.get(/^\/+(?!api)/, (req, res) => {
     return res.send(
       htmlData
         .replace(/<title[^>]*>([^<]+)<\/title>/, helmet.title.toString())
-        .replace(/<\/head>/, helmet.meta.toString() + '</head>') // eslint-disable-line prefer-template
+        .replace(/<\/head>/, helmet.meta.toString() + helmet.link.toString() + helmet.noscript.toString() + '</head>') // eslint-disable-line prefer-template
         .replace(
           '<div id="yo-landing"></div>',
           `<div id="yo-landing">${stringifiedReactApp}</div>`,
