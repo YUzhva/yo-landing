@@ -33,6 +33,16 @@ module.exports = merge.smart(
               },
             },
           ],
+        }, {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                emitFile: false,
+              },
+            },
+          ],
         },
       ],
     },
