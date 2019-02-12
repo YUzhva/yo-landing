@@ -41,7 +41,7 @@ const Home = () => (
         <Grid.Col xs={12} md={5}>
           {/* DEPENDING CONTENT */}
           <Grid.Row colMobileSpaced="sm">
-            <Grid.Col xs={12}>
+            <Grid.Col xs={12} noMargin>
               <Heading className="mobile-only--center" color="yellow" weight="bold">
                 <ChangeableText variants={['Bonjour', '👋', 'Hello', 'Привіт', 'Hola']} />
               </Heading>

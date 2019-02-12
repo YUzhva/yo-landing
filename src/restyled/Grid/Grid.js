@@ -29,11 +29,11 @@ Grid.Row = ({
 );
 
 Grid.Col = ({
-  className = '', contentAlign = '', noPadding = '', ...restProps
+  className = '', contentAlign = '', noMargin = '', noPadding = '', ...restProps
 }) => (
   createElement(
     PlainCol,
-    { className: `yo-grid__col${className && ` ${className}`}${contentAlign && ` yo-grid__col--content-align-${contentAlign}`}${noPadding && ' yo-grid__col--no-padding'}`, ...restProps },
+    { className: `yo-grid__col${className && ` ${className}`}${contentAlign && ` yo-grid__col--content-align-${contentAlign}`}${noMargin && ' yo-grid__col--no-margin'}${noPadding && ' yo-grid__col--no-padding'}`, ...restProps },
   )
 );
 

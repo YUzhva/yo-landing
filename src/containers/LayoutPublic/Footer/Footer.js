@@ -4,7 +4,7 @@ import { Heading, ChangeableText } from 'components';
 import { Grid } from 'restyled';
 
 const Footer = () => (
-  <footer className="yo-footer">
+  <footer className="yo-footer" data-aos="fade-up" data-aos-delay="250" data-aos-offset="0">
     <Grid>
       <Grid.Row colEqualHeight colMobileSpaced="md">
         <Grid.Col xs={12} sm={6}>
