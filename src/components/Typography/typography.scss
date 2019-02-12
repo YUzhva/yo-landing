@@ -55,6 +55,11 @@ body {
       text-align: justify;
     }
 
+    &--highlighted {
+      background-color: $color--yellow;
+      color: $color--white !important;
+    }
+
     &--inline {
       display: inline;
     }

@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 const withTypography = (WrappedComponent) => {
   const WrappedComponentWithTypography = ({
-    center, className, color, justify, inline, weight, ...props
+    center, className, color, highlighted, justify, inline, weight, ...props
   }) => {
     const dataAttr = {};
     const rest = {};
@@ -22,6 +22,7 @@ const withTypography = (WrappedComponent) => {
         className={cn(className, 'ms-typography', {
           'ms-typography--center': center,
           [`ms-typography--color-${color}`]: color,
+          'ms-typography--highlighted': highlighted,
           'ms-typography--justify': justify,
           'ms-typography--inline': inline,
           [`ms-typography--weight-${weight}`]: weight,
