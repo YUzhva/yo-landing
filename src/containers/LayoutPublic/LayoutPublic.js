@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet-async';
 
 import { Loader } from 'components';
@@ -47,7 +48,7 @@ class LayoutPublic extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if ((this.props.location !== prevProps.location)) {
+    if ((this.props.location.pathname !== prevProps.location.pathname)) {
       window.scrollTo(0, 0);
     }
   }
@@ -94,7 +95,9 @@ LayoutPublic.defaultProps = {
 
 LayoutPublic.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.shape({}),
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
 };
 
-export default LayoutPublic;
+export default withRouter(LayoutPublic);
