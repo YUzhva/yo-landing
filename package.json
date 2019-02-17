@@ -17,6 +17,7 @@
     "lint:js": "eslint --ext .js src/",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss"
   },
+  "heroku-run-build-script": true,
   "main": "index.js",
   "repository": "git@github.com:mainset/yo-landing.git",
   "author": "Yevhen Uzhva <yevhen.uzhva@gmail.com>",
