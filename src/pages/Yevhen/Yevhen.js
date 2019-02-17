@@ -25,10 +25,15 @@ const Yevhen = () => (
         Yevhen Uzhva, Front-End developer
       </title>
 
-      <meta name="description" content="Expert front-end developer, using ES6, React + Redux in most of the projects for SPA and PWA web applications development. Top-Rated Freelancer." />
+      <meta name="description" content="Expert front-end developer, using ES6, React + Redux for SPA and PWA web development. Top-Rated Freelancer" />
       <meta name="keywords" content="yevhen, uzhva, react, front-end, developer, top rated, upwork, best, freelancer, to hire, 2019, agency" />
 
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Yevhen Uzhva, Front-End developer" />
+      <meta property="og:description" content="Expert front-end developer, using ES6, React + Redux for SPA and PWA web development. Top-Rated Freelancer" />
       <meta property="og:image" content={ImgYevhenForSocials} />
+      <meta property="og:image:height" content="565" />
+      <meta property="og:image:width" content="1080" />
     </Helmet>
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">

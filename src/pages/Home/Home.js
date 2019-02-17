@@ -29,10 +29,15 @@ const Home = () => (
         YO! mates - Yevhen & Olenka
       </title>
 
-      <meta name="description" content="We build awesome products with the power of user-friendly Design and scalable Front-end architecture." />
+      <meta name="description" content="We build awesome products with the power of user-friendly design and scalable front-end architecture" />
       <meta name="keywords" content="best, awesome, great, fresh, new, landing, page, web app, mobile app, design, development, 2019, portfolio, top rated, upwork, best, agency, to hire, 2019" />
 
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="YO! mates - Yevhen & Olenka" />
+      <meta property="og:description" content="We build awesome products with the power of user-friendly design and scalable front-end architecture" />
       <meta property="og:image" content={PersonsForSocials} />
+      <meta property="og:image:height" content="565" />
+      <meta property="og:image:width" content="1080" />
     </Helmet>
 
     {/* SECTION 1 */}
@@ -62,8 +67,8 @@ const Home = () => (
             </Grid.Col>
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="450" data-aos-offset="0">
               <Heading size={3} weight="medium" justify>
-                We build awesome products with the power of user-friendly Design and
-                scalable Front-end architecture.
+                We build awesome products with the power of user-friendly design and
+                scalable front-end architecture
                 {/* We enjoy traveling and tasting the new beer flavors. */}
               </Heading>
             </Grid.Col>
@@ -83,7 +88,7 @@ const Home = () => (
                 onClick={triggerCrispChat}
                 ariaLabel="Start a project"
               >
-                start a project
+                start to chat
               </Button>
             </Grid.Col>
           </Grid.Row>

@@ -25,10 +25,15 @@ const Olenka = () => (
         Olenka, UX/UI Designer
       </title>
 
-      <meta name="description" content="Expert in user experience (UX), interface (UI), and marketing design. I've worked on agriculture, finance, blockchain projects. Top-Rated Freelancer." />
+      <meta name="description" content="Expert in user experience (UX), interface (UI), and marketing design. Worked on agriculture, finance, blockchain projects. Top-Rated Freelancer" />
       <meta name="keywords" content="olenka, tomchuk, ux, ui, designer, top rated, upwork, best, freelancer, to hire, 2019, agency" />
 
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Olenka, UX/UI Designer" />
+      <meta property="og:description" content="Expert in user experience (UX), interface (UI), and marketing design. Worked on agriculture, finance, blockchain projects. Top-Rated Freelancer" />
       <meta property="og:image" content={ImgOlenkaForSocials} />
+      <meta property="og:image:height" content="565" />
+      <meta property="og:image:width" content="1080" />
     </Helmet>
 
     <Grid.Row data-aos="zoom-out-right" data-aos-offset="0">
@@ -54,7 +59,7 @@ const Olenka = () => (
           <span role="img" aria-label="wave">🤝</span>
           Usually, I collaborate with members of the development and marketing
           teams. People describe me as responsible team-player
-          and I&apos;m comfortable taking initiative as well. I&apos;ve worked on social
+          and I&apos;m comfortable taking initiative as well. Worked on social
           & entertainment, agriculture, finance, blockchain projects.
         </Paragraph>
         <Spacing height={24} />

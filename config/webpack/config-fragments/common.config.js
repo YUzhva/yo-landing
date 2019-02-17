@@ -27,7 +27,7 @@ module.exports = {
               name: '[name].[hash].[ext]',
               outputPath: 'dist/assets/images/',
               // NOTE: add slash at the begining of /dist/ link. Relative to root.
-              publicPath: '/dist/assets/images/',
+              // publicPath: '/dist/assets/images/',
             },
           },
         ],
