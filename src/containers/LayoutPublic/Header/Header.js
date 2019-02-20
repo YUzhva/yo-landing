@@ -9,15 +9,64 @@ import ButtonMenu from './ButtonMenu';
 
 import YOLogo from './yo-logo.svg';
 
+let elCrispChatLinks;
+let elCrispChatCircleLink;
+
+const assignCrispChatElements = () => {
+  if (window.$crisp) {
+    window.$crisp.push(['on', 'session:loaded', () => {
+      if (!elCrispChatLinks) {
+        // NOTE: possible selector: #crisp-chatbox a
+        elCrispChatLinks = window.document.querySelectorAll('div.crisp-client a');
+        elCrispChatCircleLink = elCrispChatLinks[elCrispChatLinks.length - 1];
+      }
+    }]);
+  }
+};
+
+const moveCrispChatLink = (isMobileMenuVisible) => {
+  if (elCrispChatCircleLink) {
+    const movementDirection = isMobileMenuVisible ? 'top' : 'bottom';
+
+    switch (movementDirection) {
+      case 'top':
+        elCrispChatCircleLink.setAttribute(
+          'style',
+          'transition: bottom 0.5s !important; bottom: 70px !important',
+        );
+        break;
+      case 'bottom':
+        elCrispChatCircleLink.setAttribute(
+          'style',
+          'transition: bottom 0.5s !important',
+        );
+        break;
+      // no default
+    }
+  }
+};
+
 class Header extends Component {
   state = { isMobileMenuVisible: false };
 
+  componentDidMount() {
+    assignCrispChatElements();
+  }
+
   toggleMobileMenu = () => {
-    this.setState((prevState) => ({ isMobileMenuVisible: !prevState.isMobileMenuVisible }));
+    this.setState(
+      (prevState) => ({ isMobileMenuVisible: !prevState.isMobileMenuVisible }),
+      () => moveCrispChatLink(this.state.isMobileMenuVisible),
+    );
   }
 
   closeMobileMenu = () => {
-    if (this.state.isMobileMenuVisible) this.setState({ isMobileMenuVisible: false });
+    if (this.state.isMobileMenuVisible) {
+      this.setState(
+        { isMobileMenuVisible: false },
+        () => moveCrispChatLink(this.state.isMobileMenuVisible),
+      );
+    }
   }
 
   render() {
