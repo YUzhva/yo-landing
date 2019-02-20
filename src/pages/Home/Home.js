@@ -84,7 +84,7 @@ const Home = () => (
             <Grid.Col xs={12} data-aos="fade-up" data-aos-delay="550" data-aos-offset="250">
               <Spacing height={48} />
               <Button
-                className="yo-home-page__start-btn"
+                className="yo-home-page__start-btn animated infinite pulse slow"
                 onClick={triggerCrispChat}
                 ariaLabel="Start a project"
               >
