@@ -18,6 +18,17 @@ class LayoutPublic extends Component {
   };
 
   componentDidMount() {
+    this.handleInitialLoader();
+    this.removeQueryRefParam();
+  }
+
+  componentDidUpdate(prevProps) {
+    if ((this.props.location.pathname !== prevProps.location.pathname)) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  handleInitialLoader = () => {
     this.isTimeoutFinished = false;
     const isLandingLoadedPreviously = !!(window && window.sessionStorage.getItem('isLandingLoadedPreviously'));
 
@@ -47,10 +58,17 @@ class LayoutPublic extends Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if ((this.props.location.pathname !== prevProps.location.pathname)) {
-      window.scrollTo(0, 0);
-    }
+  removeQueryRefParam = () => {
+    const { location } = this.props;
+
+    const params = new URLSearchParams(location.search);
+    params.delete('ref');
+    const cleanURLSearchParams = params.toString();
+
+    this.props.history.push({
+      path: location.pathname,
+      search: cleanURLSearchParams ? `?${cleanURLSearchParams}` : null,
+    });
   }
 
   render() {
@@ -95,8 +113,12 @@ LayoutPublic.defaultProps = {
 
 LayoutPublic.propTypes = {
   children: PropTypes.node.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
+    search: PropTypes.string.isRequired,
   }),
 };
 
